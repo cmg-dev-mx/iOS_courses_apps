@@ -37,6 +37,11 @@ let booleano: Bool = true
 // Cadenas
 let cadena: String = "Hola mundo"
 
+// Interpolacion de cadenas
+let nombre = "Juan"
+let apellido = "Perez"
+let nombreCompleto2 = "Mi nombre es \(nombre) \(apellido)"
+
 // - Operadores
 
 // Aritmeticos
