@@ -10,5 +10,6 @@
         <page name='NestedTypes'/>
         <page name='Extensions'/>
         <page name='Protocols'/>
+        <page name='DelegateProtocol'/>
     </pages>
 </playground>
