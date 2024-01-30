@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		234329F82B616839000B4737 /* POO.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = POO.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		23565BFE2B602E9F00A2392E /* Ejemplo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ejemplo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23565C012B602E9F00A2392E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23565C032B602E9F00A2392E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		23565C0F2B602EA000A2392E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23565C152B602ED200A2392E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		23565C162B60343700A2392E /* PlaygroundBases.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlaygroundBases.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		23816A192B695F2B0071E154 /* Avanzados.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Avanzados.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		23A0C7092B606B3F00DC1A98 /* Funciones.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Funciones.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		23BDB4592B605269002884FD /* Estructuras.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Estructuras.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -71,6 +73,8 @@
 				23565C162B60343700A2392E /* PlaygroundBases.playground */,
 				23BDB4592B605269002884FD /* Estructuras.playground */,
 				23A0C7092B606B3F00DC1A98 /* Funciones.playground */,
+				234329F82B616839000B4737 /* POO.playground */,
+				23816A192B695F2B0071E154 /* Avanzados.playground */,
 			);
 			path = Ejemplo;
 			sourceTree = "<group>";
