@@ -7,5 +7,6 @@
         <page name='GuardLet'/>
         <page name='ErrorHandling'/>
         <page name='TypeCasting'/>
+        <page name='NestedTypes'/>
     </pages>
 </playground>
