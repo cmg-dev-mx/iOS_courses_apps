@@ -14,3 +14,28 @@ struct Cuadrado {
 
 var miCuadrado = Cuadrado()
 miCuadrado.area()
+
+
+class Automovil {
+
+    var color = "Neutro"
+    var numLlantas = 4
+    var precio = 0.0
+
+    func encender() -> Bool {
+        return true
+    }
+
+    func apagar() -> Bool {
+        return false
+    }
+
+    func acelerar() -> Bool {
+        return true
+    }
+}
+
+var miAuto = Automovil()
+miAuto.precio = 5000.0
+
+print(miAuto.precio)
