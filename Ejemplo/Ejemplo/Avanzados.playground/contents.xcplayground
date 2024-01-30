@@ -11,5 +11,7 @@
         <page name='Extensions'/>
         <page name='Protocols'/>
         <page name='DelegateProtocol'/>
+        <page name='Generics'/>
+        <page name='AdvancedOperators'/>
     </pages>
 </playground>
