@@ -30,6 +30,7 @@
 		23816A192B695F2B0071E154 /* Avanzados.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Avanzados.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		23A0C7092B606B3F00DC1A98 /* Funciones.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Funciones.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		23BDB4592B605269002884FD /* Estructuras.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Estructuras.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		23C9C8032B69A1430079A582 /* ColeccionesAvanzados.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ColeccionesAvanzados.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 				23A0C7092B606B3F00DC1A98 /* Funciones.playground */,
 				234329F82B616839000B4737 /* POO.playground */,
 				23816A192B695F2B0071E154 /* Avanzados.playground */,
+				23C9C8032B69A1430079A582 /* ColeccionesAvanzados.playground */,
 			);
 			path = Ejemplo;
 			sourceTree = "<group>";
