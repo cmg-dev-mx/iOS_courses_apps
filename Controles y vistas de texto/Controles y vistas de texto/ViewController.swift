@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myPickerView: UIPickerView!
     @IBOutlet weak var myPageControl: UIPageControl!
     @IBOutlet weak var mySegmentedControl: UISegmentedControl!
+    @IBOutlet weak var mySlider: UISlider!
     
     // Variables
     private let myPickerViewValues = [
@@ -48,6 +49,11 @@ class ViewController: UIViewController {
             mySegmentedControl.insertSegment(withTitle: value, at: index, animated: true)
         }
         
+        // Slider
+        mySlider.minimumTrackTintColor = .red
+        mySlider.minimumValue = 1
+        mySlider.maximumValue = Float(myPickerViewValues.count)
+        mySlider.value = 1
     }
     
     // Actions
@@ -67,6 +73,7 @@ class ViewController: UIViewController {
         myButton.setTitle(myString, for: .normal)
         myPickerView.selectRow(index, inComponent: 0, animated: true)
         mySegmentedControl.selectedSegmentIndex = index
+        mySlider.value = Float(index+1)
     }
     
     @IBAction func mySegmentedControlAction(_ sender: Any) {
@@ -76,6 +83,17 @@ class ViewController: UIViewController {
         myButton.setTitle(myString, for: .normal)
         myPickerView.selectRow(index, inComponent: 0, animated: true)
         myPageControl.currentPage = index
+        mySlider.value = Float(index+1)
+    }
+    
+    @IBAction func mySliderAction(_ sender: Any) {
+        let index = Int(mySlider.value) - 1
+        let myString = myPickerViewValues[index]
+        
+        myButton.setTitle(myString, for: .normal)
+        myPickerView.selectRow(index, inComponent: 0, animated: true)
+        myPageControl.currentPage = index
+        mySegmentedControl.selectedSegmentIndex = index
     }
 }
 
@@ -100,5 +118,6 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         myButton.setTitle(myString, for: .normal)
         myPageControl.currentPage = index
         mySegmentedControl.selectedSegmentIndex = index
+        mySlider.value = Float(index+1)
     }
 }
