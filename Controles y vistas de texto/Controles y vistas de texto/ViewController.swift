@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var myStepperLabel: UILabel!
     @IBOutlet weak var mySwitchLabel: UILabel!
+    @IBOutlet weak var myTextField: UITextField!
     
     // Variables
     private let myPickerViewValues = [
@@ -83,6 +84,11 @@ class ViewController: UIViewController {
         myStepperLabel.text = "1"
         
         mySwitchLabel.text = "Está apagado"
+        
+        // Text field
+        myTextField.textColor = .brown
+        myTextField.placeholder = "Escribe algo"
+        myTextField.delegate = self
     }
     
     // Actions
@@ -181,5 +187,16 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         mySegmentedControl.selectedSegmentIndex = index
         mySlider.value = Float(index+1)
         myStepper.value = Double(index + 1)
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        myButton.setTitle(myTextField.text, for: .normal)
     }
 }
