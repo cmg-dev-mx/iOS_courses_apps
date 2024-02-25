@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myStepperLabel: UILabel!
     @IBOutlet weak var mySwitchLabel: UILabel!
     @IBOutlet weak var myTextField: UITextField!
+    @IBOutlet weak var myTextView: UITextView!
     
     // Variables
     private let myPickerViewValues = [
@@ -89,6 +90,11 @@ class ViewController: UIViewController {
         myTextField.textColor = .brown
         myTextField.placeholder = "Escribe algo"
         myTextField.delegate = self
+        
+        // Text view
+        myTextView.textColor = .brown
+        myTextView.delegate = self
+        
     }
     
     // Actions
@@ -99,6 +105,8 @@ class ViewController: UIViewController {
         } else {
             myButton.backgroundColor = .blue
         }
+
+        myTextView.resignFirstResponder()
     }
     
     @IBAction func myPageControlAction(_ sender: Any) {
@@ -122,7 +130,7 @@ class ViewController: UIViewController {
         mySlider.value = Float(index + 1)
         myStepper.value = Double(index + 1)
     }
-    
+
     @IBAction func mySliderAction(_ sender: Any) {
         let index = Int(mySlider.value) - 1
         let myString = myPickerViewValues[index]
@@ -198,5 +206,16 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         myButton.setTitle(myTextField.text, for: .normal)
+    }
+}
+
+extension ViewController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        myTextField.isHidden = true
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        myTextField.isHidden = false
     }
 }
