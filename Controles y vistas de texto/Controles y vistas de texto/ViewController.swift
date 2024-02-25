@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mySlider: UISlider!
     @IBOutlet weak var myStepper: UIStepper!
     @IBOutlet weak var mySwitch: UISwitch!
+    @IBOutlet weak var myProgressView: UIProgressView!
+    @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     
     // Variables
     private let myPickerViewValues = [
@@ -65,6 +67,13 @@ class ViewController: UIViewController {
         // Switch
         mySwitch.onTintColor = .purple
         mySwitch.isOn = false
+        
+        // ProgressIndicator
+        myProgressView.progress = 0
+        
+        myActivityIndicator.color = .orange
+        myActivityIndicator.startAnimating()
+        myActivityIndicator.hidesWhenStopped = true
     }
     
     // Actions
@@ -103,11 +112,15 @@ class ViewController: UIViewController {
         let index = Int(mySlider.value) - 1
         let myString = myPickerViewValues[index]
         
+        let progress = Double(index + 1) / Double(myPickerViewValues.count)
+        
         myButton.setTitle(myString, for: .normal)
         myPickerView.selectRow(index, inComponent: 0, animated: true)
         myPageControl.currentPage = index
         mySegmentedControl.selectedSegmentIndex = index
         myStepper.value = Double(index + 1)
+        
+        myProgressView.progress = Float(progress)
     }
     
     @IBAction func myStepperAction(_ sender: Any) {
@@ -124,8 +137,10 @@ class ViewController: UIViewController {
     @IBAction func mySwitchAction(_ sender: Any) {
         if mySwitch.isOn {
             myPickerView.isHidden = false
+            myActivityIndicator.stopAnimating()
         } else {
             myPickerView.isHidden = true
+            myActivityIndicator.startAnimating()
         }
     }
 }

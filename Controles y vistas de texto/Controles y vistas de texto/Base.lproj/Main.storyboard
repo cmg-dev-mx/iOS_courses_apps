@@ -64,6 +64,12 @@
                                     <action selector="mySwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="kG3-7M-uVY"/>
                                 </connections>
                             </switch>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZD5-wI-X2p">
+                                <rect key="frame" x="20" y="544" width="353" height="4"/>
+                            </progressView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mmp-Ws-RUe">
+                                <rect key="frame" x="186.66666666666666" y="204" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -77,22 +83,29 @@
                             <constraint firstItem="rKC-1f-bEL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PHW-2R-Q2R"/>
                             <constraint firstItem="piQ-Rv-wgz" firstAttribute="top" secondItem="Pbk-he-YzB" secondAttribute="bottom" constant="20" id="YUi-2L-di2"/>
                             <constraint firstItem="Pbk-he-YzB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zas-Ub-2Kp"/>
+                            <constraint firstItem="mmp-Ws-RUe" firstAttribute="centerX" secondItem="Pbk-he-YzB" secondAttribute="centerX" id="a04-Cl-uv3"/>
                             <constraint firstItem="jLQ-an-cg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a2Q-An-SoO"/>
+                            <constraint firstItem="ZD5-wI-X2p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bNi-mQ-wUV"/>
                             <constraint firstItem="QGe-my-y6n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="e8V-qA-WTo"/>
+                            <constraint firstItem="ZD5-wI-X2p" firstAttribute="top" secondItem="4QU-x8-u1b" secondAttribute="bottom" constant="20" id="h5r-BG-Zg2"/>
                             <constraint firstItem="rKC-1f-bEL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ic9-67-u35"/>
                             <constraint firstItem="piQ-Rv-wgz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kF6-hU-y51"/>
                             <constraint firstItem="jLQ-an-cg5" firstAttribute="top" secondItem="QGe-my-y6n" secondAttribute="bottom" constant="20" id="mTe-ft-m1e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="piQ-Rv-wgz" secondAttribute="trailing" constant="20" id="pSV-vT-jV5"/>
+                            <constraint firstItem="mmp-Ws-RUe" firstAttribute="centerY" secondItem="Pbk-he-YzB" secondAttribute="centerY" id="sWp-JF-w8s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QGe-my-y6n" secondAttribute="trailing" constant="20" id="tyP-P5-BUa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLQ-an-cg5" secondAttribute="trailing" constant="20" id="vgB-qr-qtf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZD5-wI-X2p" secondAttribute="trailing" constant="20" id="waD-dz-d7Y"/>
                             <constraint firstItem="Pbk-he-YzB" firstAttribute="top" secondItem="rKC-1f-bEL" secondAttribute="bottom" constant="20" id="y14-9M-YiC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pbk-he-YzB" secondAttribute="trailing" id="zEp-bq-PqW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myActivityIndicator" destination="mmp-Ws-RUe" id="bEI-KF-q4m"/>
                         <outlet property="myButton" destination="rKC-1f-bEL" id="IV4-hk-vpD"/>
                         <outlet property="myPageControl" destination="piQ-Rv-wgz" id="aSD-VP-JxE"/>
                         <outlet property="myPickerView" destination="Pbk-he-YzB" id="wqL-Qr-bDW"/>
+                        <outlet property="myProgressView" destination="ZD5-wI-X2p" id="F6t-3G-63J"/>
                         <outlet property="mySegmentedControl" destination="QGe-my-y6n" id="tnh-CL-TyD"/>
                         <outlet property="mySlider" destination="jLQ-an-cg5" id="61D-17-LFz"/>
                         <outlet property="myStepper" destination="JcO-Ga-V3R" id="H7E-Tv-PJ9"/>
