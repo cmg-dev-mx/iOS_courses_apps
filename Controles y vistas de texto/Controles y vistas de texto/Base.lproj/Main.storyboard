@@ -70,17 +70,34 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mmp-Ws-RUe">
                                 <rect key="frame" x="186.66666666666666" y="204" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C49-Yg-SkC">
+                                <rect key="frame" x="263.66666666666669" y="446.66666666666669" width="109.33333333333331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5o-8Q-cf7">
+                                <rect key="frame" x="241" y="498" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="C49-Yg-SkC" firstAttribute="centerY" secondItem="JcO-Ga-V3R" secondAttribute="centerY" id="19U-vg-zYh"/>
                             <constraint firstItem="4QU-x8-u1b" firstAttribute="top" secondItem="JcO-Ga-V3R" secondAttribute="bottom" constant="20" id="2ir-zU-UxX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rKC-1f-bEL" secondAttribute="trailing" constant="20" id="3W1-4N-4z7"/>
                             <constraint firstItem="QGe-my-y6n" firstAttribute="top" secondItem="piQ-Rv-wgz" secondAttribute="bottom" constant="20" id="7JE-YO-8ax"/>
+                            <constraint firstItem="j5o-8Q-cf7" firstAttribute="centerY" secondItem="4QU-x8-u1b" secondAttribute="centerY" id="B0w-Kn-gGP"/>
                             <constraint firstItem="4QU-x8-u1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fuh-lx-yfM"/>
                             <constraint firstItem="JcO-Ga-V3R" firstAttribute="top" secondItem="jLQ-an-cg5" secondAttribute="bottom" constant="20" id="G2l-7W-LTx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C49-Yg-SkC" secondAttribute="trailing" constant="20" id="GAO-4i-I31"/>
                             <constraint firstItem="JcO-Ga-V3R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GS4-mb-hrj"/>
                             <constraint firstItem="rKC-1f-bEL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PHW-2R-Q2R"/>
+                            <constraint firstItem="j5o-8Q-cf7" firstAttribute="leading" secondItem="4QU-x8-u1b" secondAttribute="trailing" constant="20" id="SEv-fe-Tu0"/>
+                            <constraint firstItem="C49-Yg-SkC" firstAttribute="leading" secondItem="JcO-Ga-V3R" secondAttribute="trailing" constant="20" id="WwL-sh-mn7"/>
                             <constraint firstItem="piQ-Rv-wgz" firstAttribute="top" secondItem="Pbk-he-YzB" secondAttribute="bottom" constant="20" id="YUi-2L-di2"/>
                             <constraint firstItem="Pbk-he-YzB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zas-Ub-2Kp"/>
                             <constraint firstItem="mmp-Ws-RUe" firstAttribute="centerX" secondItem="Pbk-he-YzB" secondAttribute="centerX" id="a04-Cl-uv3"/>
@@ -90,6 +107,7 @@
                             <constraint firstItem="ZD5-wI-X2p" firstAttribute="top" secondItem="4QU-x8-u1b" secondAttribute="bottom" constant="20" id="h5r-BG-Zg2"/>
                             <constraint firstItem="rKC-1f-bEL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ic9-67-u35"/>
                             <constraint firstItem="piQ-Rv-wgz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kF6-hU-y51"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j5o-8Q-cf7" secondAttribute="trailing" constant="20" id="lfe-EY-v3w"/>
                             <constraint firstItem="jLQ-an-cg5" firstAttribute="top" secondItem="QGe-my-y6n" secondAttribute="bottom" constant="20" id="mTe-ft-m1e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="piQ-Rv-wgz" secondAttribute="trailing" constant="20" id="pSV-vT-jV5"/>
                             <constraint firstItem="mmp-Ws-RUe" firstAttribute="centerY" secondItem="Pbk-he-YzB" secondAttribute="centerY" id="sWp-JF-w8s"/>
@@ -109,7 +127,9 @@
                         <outlet property="mySegmentedControl" destination="QGe-my-y6n" id="tnh-CL-TyD"/>
                         <outlet property="mySlider" destination="jLQ-an-cg5" id="61D-17-LFz"/>
                         <outlet property="myStepper" destination="JcO-Ga-V3R" id="H7E-Tv-PJ9"/>
+                        <outlet property="myStepperLabel" destination="C49-Yg-SkC" id="U0m-pJ-0qw"/>
                         <outlet property="mySwitch" destination="4QU-x8-u1b" id="fqs-5H-S0b"/>
+                        <outlet property="mySwitchLabel" destination="j5o-8Q-cf7" id="f8S-j5-xoA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

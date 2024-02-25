@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mySwitch: UISwitch!
     @IBOutlet weak var myProgressView: UIProgressView!
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var myStepperLabel: UILabel!
+    @IBOutlet weak var mySwitchLabel: UILabel!
     
     // Variables
     private let myPickerViewValues = [
@@ -74,6 +76,13 @@ class ViewController: UIViewController {
         myActivityIndicator.color = .orange
         myActivityIndicator.startAnimating()
         myActivityIndicator.hidesWhenStopped = true
+        
+        // Labels
+        myStepperLabel.textColor = .darkGray
+        myStepperLabel.font = UIFont.boldSystemFont(ofSize: 36)
+        myStepperLabel.text = "1"
+        
+        mySwitchLabel.text = "Está apagado"
     }
     
     // Actions
@@ -132,15 +141,19 @@ class ViewController: UIViewController {
         myPageControl.currentPage = index
         mySegmentedControl.selectedSegmentIndex = index
         mySlider.value = Float(index + 1)
+        
+        myStepperLabel.text = "\(index + 1)"
     }
     
     @IBAction func mySwitchAction(_ sender: Any) {
         if mySwitch.isOn {
             myPickerView.isHidden = false
             myActivityIndicator.stopAnimating()
+            mySwitchLabel.text = "Está encendido"
         } else {
             myPickerView.isHidden = true
             myActivityIndicator.startAnimating()
+            mySwitchLabel.text = "Está apagado"
         }
     }
 }
