@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvP-Fj-b1a">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1402"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1702"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnm-oB-khb">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
@@ -30,10 +31,17 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZiS-dG-3Jd">
-                                                <rect key="frame" x="0.0" y="200" width="393" height="1202"/>
+                                                <rect key="frame" x="0.0" y="200" width="393" height="1502"/>
                                                 <subviews>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCQ-9z-2HQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="300" id="WeP-Pg-aAd"/>
+                                                        </constraints>
+                                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                                    </mapView>
                                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4q-ir-HdR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                                                        <rect key="frame" x="0.0" y="300" width="393" height="400"/>
                                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="400" id="tbj-zS-Xct"/>
@@ -44,7 +52,7 @@
                                                         </wkWebViewConfiguration>
                                                     </wkWebView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ane-dE-Igy">
-                                                        <rect key="frame" x="0.0" y="400" width="393" height="400"/>
+                                                        <rect key="frame" x="0.0" y="700" width="393" height="400"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oY-LT-Fuf">
                                                                 <rect key="frame" x="20" y="20" width="353" height="20.333333333333329"/>
@@ -73,14 +81,14 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sye-g4-6jO">
-                                                        <rect key="frame" x="0.0" y="800" width="393" height="2"/>
+                                                        <rect key="frame" x="0.0" y="1100" width="393" height="2"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="bRQ-Y6-DoT"/>
                                                         </constraints>
                                                     </view>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape_image" translatesAutoresizingMaskIntoConstraints="NO" id="pdg-nx-Ro3">
-                                                        <rect key="frame" x="0.0" y="802" width="393" height="400"/>
+                                                        <rect key="frame" x="0.0" y="1102" width="393" height="400"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="400" id="R4F-83-iSL"/>
                                                         </constraints>
@@ -121,6 +129,7 @@
                     <connections>
                         <outlet property="myFakeView" destination="fnm-oB-khb" id="hHH-ev-FOc"/>
                         <outlet property="myImage" destination="pdg-nx-Ro3" id="CoE-mc-jab"/>
+                        <outlet property="myMap" destination="cCQ-9z-2HQ" id="hWO-t1-sqN"/>
                         <outlet property="myView" destination="Ane-dE-Igy" id="ohl-sG-jS8"/>
                         <outlet property="myWebView" destination="H4q-ir-HdR" id="WTt-JO-8Lp"/>
                     </connections>
