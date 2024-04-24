@@ -169,14 +169,40 @@
         <!--Item 1-->
         <scene sceneID="DNc-fq-K3W">
             <objects>
-                <viewController storyboardIdentifier="vcGreen" id="lcx-tE-qjs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vcGreen" id="lcx-tE-qjs" customClass="GreenViewController" customModule="ViewsAndNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YOR-BA-RIN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-Vc-3I6">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lcx-tE-qjs" id="hpn-ut-OHA"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5M-8D-QWT">
+                                <rect key="frame" x="151.66666666666666" y="415.66666666666669" width="89.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dCu-KH-8b4"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="l3b-Vc-3I6" firstAttribute="top" secondItem="dCu-KH-8b4" secondAttribute="top" id="AZv-vi-tQc"/>
+                            <constraint firstItem="B5M-8D-QWT" firstAttribute="centerY" secondItem="YOR-BA-RIN" secondAttribute="centerY" id="FP1-iY-a8m"/>
+                            <constraint firstItem="l3b-Vc-3I6" firstAttribute="trailing" secondItem="dCu-KH-8b4" secondAttribute="trailing" id="KIN-a3-Wrm"/>
+                            <constraint firstItem="B5M-8D-QWT" firstAttribute="centerX" secondItem="YOR-BA-RIN" secondAttribute="centerX" id="klH-YH-fb2"/>
+                            <constraint firstItem="l3b-Vc-3I6" firstAttribute="leading" secondItem="dCu-KH-8b4" secondAttribute="leading" id="qil-Nl-JUp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="niN-kI-sbo"/>
+                    <connections>
+                        <outlet property="myLabel" destination="B5M-8D-QWT" id="X1r-zl-t65"/>
+                        <outlet property="mySearchBar" destination="l3b-Vc-3I6" id="OIz-UD-bDj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCX-MJ-8jg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
