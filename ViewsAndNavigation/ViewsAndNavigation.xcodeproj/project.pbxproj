@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D774BC382BD8B1D100EEEB79 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774BC372BD8B1D100EEEB79 /* PageViewController.swift */; };
 		D7DCB9172B8EDF9300551D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCB9162B8EDF9300551D1F /* AppDelegate.swift */; };
 		D7DCB9192B8EDF9300551D1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCB9182B8EDF9300551D1F /* SceneDelegate.swift */; };
 		D7DCB91B2B8EDF9300551D1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DCB91A2B8EDF9300551D1F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D774BC372BD8B1D100EEEB79 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		D7DCB9132B8EDF9300551D1F /* ViewsAndNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewsAndNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DCB9162B8EDF9300551D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DCB9182B8EDF9300551D1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D7DCB91F2B8EDF9400551D1F /* Assets.xcassets */,
 				D7DCB9212B8EDF9400551D1F /* LaunchScreen.storyboard */,
 				D7DCB9242B8EDF9400551D1F /* Info.plist */,
+				D774BC372BD8B1D100EEEB79 /* PageViewController.swift */,
 			);
 			path = ViewsAndNavigation;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				D7DCB91B2B8EDF9300551D1F /* ViewController.swift in Sources */,
 				D7DCB9172B8EDF9300551D1F /* AppDelegate.swift in Sources */,
 				D7DCB9192B8EDF9300551D1F /* SceneDelegate.swift in Sources */,
+				D774BC382BD8B1D100EEEB79 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
