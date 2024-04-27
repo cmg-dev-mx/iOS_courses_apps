@@ -17,35 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDu-Jh-S5Z">
-                                <rect key="frame" x="133" y="200" width="127" height="35"/>
+                                <rect key="frame" x="160" y="200" width="73" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Yellow (Push)"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Yellow"/>
                                 <connections>
-                                    <segue destination="caF-DO-rAG" kind="show" id="V7f-RV-L0X"/>
+                                    <action selector="onClickBtnYellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yil-WJ-4P3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40b-Qq-PWg">
-                                <rect key="frame" x="123" y="291" width="147" height="35"/>
+                                <rect key="frame" x="161" y="291" width="71" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Green (Modally)"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Green"/>
                                 <connections>
-                                    <segue destination="iSE-2E-AIC" kind="presentation" id="2z5-ju-8ok"/>
+                                    <action selector="onClickBtnGreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1C7-os-BD8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wi-lU-pz7">
-                                <rect key="frame" x="119" y="409" width="157" height="35"/>
+                                <rect key="frame" x="161" y="408" width="74" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Purple (Pop over)"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Purple"/>
                                 <connections>
-                                    <segue destination="crl-Lg-miX" kind="popoverPresentation" popoverAnchorView="3wi-lU-pz7" id="aJY-oh-szQ">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="onClickBtnPurple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOO-Mc-PCJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,6 +54,11 @@
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Blue" id="Cns-3o-4bp"/>
+                    <connections>
+                        <segue destination="caF-DO-rAG" kind="show" identifier="VCYellow" id="oeU-P5-6ov"/>
+                        <segue destination="iSE-2E-AIC" kind="show" identifier="VCGreen" id="Nzw-9P-GIL"/>
+                        <segue destination="crl-Lg-miX" kind="show" identifier="VCPurple" id="bIf-jg-iSX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +67,7 @@
         <!--Yellow-->
         <scene sceneID="MUj-Kf-qch">
             <objects>
-                <viewController title="Yellow" id="caF-DO-rAG" sceneMemberID="viewController">
+                <viewController title="Yellow" id="caF-DO-rAG" customClass="YellowViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0fK-HH-Qzy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,9 +83,9 @@
         <!--Green-->
         <scene sceneID="rXe-r6-dwq">
             <objects>
-                <viewController title="Green" id="iSE-2E-AIC" sceneMemberID="viewController">
+                <viewController title="Green" id="iSE-2E-AIC" customClass="GreenViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rC3-Xu-3rS">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="nLj-Au-IQg"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -93,24 +99,12 @@
         <!--Purple-->
         <scene sceneID="ht1-nm-yla">
             <objects>
-                <viewController title="Purple" id="crl-Lg-miX" sceneMemberID="viewController">
+                <viewController title="Purple" id="crl-Lg-miX" customClass="PurpleViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yVW-ih-N1a">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X99-sN-xcg">
-                                <rect key="frame" x="178" y="20" width="37" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fhR-s8-Fos"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                        <constraints>
-                            <constraint firstItem="X99-sN-xcg" firstAttribute="top" secondItem="fhR-s8-Fos" secondAttribute="top" constant="20" id="1hQ-PC-9DN"/>
-                            <constraint firstItem="X99-sN-xcg" firstAttribute="centerX" secondItem="yVW-ih-N1a" secondAttribute="centerX" id="Lxv-hM-0c6"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Purple" id="JNT-xi-xUX"/>
                 </viewController>
@@ -136,9 +130,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
