@@ -13,6 +13,8 @@
 		D719CB4D2BDD6F9C00DDEB05 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D719CB4C2BDD6F9C00DDEB05 /* Base */; };
 		D719CB4F2BDD6F9C00DDEB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D719CB4E2BDD6F9C00DDEB05 /* Assets.xcassets */; };
 		D719CB522BDD6F9C00DDEB05 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D719CB512BDD6F9C00DDEB05 /* Base */; };
+		D719CB5B2BDD7D7600DDEB05 /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D719CB592BDD7D7600DDEB05 /* MyCustomTableViewCell.swift */; };
+		D719CB5C2BDD7D7600DDEB05 /* MyCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D719CB5A2BDD7D7600DDEB05 /* MyCustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D719CB4E2BDD6F9C00DDEB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D719CB512BDD6F9C00DDEB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D719CB532BDD6F9C00DDEB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D719CB592BDD7D7600DDEB05 /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
+		D719CB5A2BDD7D7600DDEB05 /* MyCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				D719CB4E2BDD6F9C00DDEB05 /* Assets.xcassets */,
 				D719CB502BDD6F9C00DDEB05 /* LaunchScreen.storyboard */,
 				D719CB532BDD6F9C00DDEB05 /* Info.plist */,
+				D719CB592BDD7D7600DDEB05 /* MyCustomTableViewCell.swift */,
+				D719CB5A2BDD7D7600DDEB05 /* MyCustomTableViewCell.xib */,
 			);
 			path = TablasColecciones;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				D719CB4F2BDD6F9C00DDEB05 /* Assets.xcassets in Resources */,
 				D719CB522BDD6F9C00DDEB05 /* Base in Resources */,
+				D719CB5C2BDD7D7600DDEB05 /* MyCustomTableViewCell.xib in Resources */,
 				D719CB4D2BDD6F9C00DDEB05 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				D719CB4A2BDD6F9C00DDEB05 /* ViewController.swift in Sources */,
 				D719CB462BDD6F9C00DDEB05 /* AppDelegate.swift in Sources */,
+				D719CB5B2BDD7D7600DDEB05 /* MyCustomTableViewCell.swift in Sources */,
 				D719CB482BDD6F9C00DDEB05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
