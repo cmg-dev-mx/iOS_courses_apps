@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     private let myContries = ["Mexico", "USA", "Canada", "Brazil", "Argentina", "Chile", "Peru", "Colombia", "Venezuela", "Ecuador", "Bolivia", "Paraguay", "Uruguay"]
     
+    private let myCellWidth = UIScreen.main.bounds.width / 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,5 +45,12 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("You selected: \(myContries[indexPath.row]) from section: \(indexPath.section)")
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: myCellWidth, height: myCellWidth)
     }
 }
