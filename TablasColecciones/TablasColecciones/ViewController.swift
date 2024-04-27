@@ -38,7 +38,7 @@ extension ViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             return 50
         } else {
-            return 150
+            return UITableView.automaticDimension 
         }
     }
     
@@ -58,6 +58,11 @@ extension ViewController: UITableViewDataSource {
             let cell = myTableView.dequeueReusableCell(withIdentifier: "myCustomCell", for: indexPath) as? MyCustomTableViewCell
             cell?.myFirstLabel.text = String(indexPath.row + 1)
             cell?.mySecondLabel.text = myContries[indexPath.row]
+
+            if indexPath.row == 2 {
+                cell!.mySecondLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc sed justo lacinia tincidunt. Nullam euismod, nisl a ultrices tincidunt, nunc nunc tincidunt nisl, id tincidunt nunc nisl id nunc. Sed auctor, nisl a ultrices tincidunt, nunc nunc tincidunt nisl, id tincidunt nunc nisl id nunc."
+            }
+
             return cell!
         }
     }
