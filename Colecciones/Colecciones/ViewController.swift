@@ -9,11 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myCollectionView: UICollectionView!
+
+    private let myContries = ["Mexico", "USA", "Canada", "Brazil", "Argentina", "Chile", "Peru", "Colombia", "Venezuela", "Ecuador", "Bolivia", "Paraguay", "Uruguay"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        myCollectionView.dataSource = self
+        myCollectionView.register(UINib(nibName: "MyCustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "myCell")
     }
-
-
 }
 
+extension ViewController: UICollectionViewDataSource {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return myContries.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCustomCollectionViewCell
+        cell.myFirstLabel.text = myContries[indexPath.row]
+        return cell
+    }
+}
