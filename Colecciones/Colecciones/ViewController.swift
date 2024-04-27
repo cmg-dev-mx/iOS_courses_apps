@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         myCollectionView.dataSource = self
+        myCollectionView.delegate = self
         myCollectionView.register(UINib(nibName: "MyCustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "myCell")
     }
 }
@@ -35,5 +36,12 @@ extension ViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCustomCollectionViewCell
         cell.myFirstLabel.text = myContries[indexPath.row]
         return cell
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("You selected: \(myContries[indexPath.row]) from section: \(indexPath.section)")
     }
 }
