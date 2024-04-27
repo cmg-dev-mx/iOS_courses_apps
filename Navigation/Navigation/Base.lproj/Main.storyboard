@@ -8,53 +8,99 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Blue-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Blue" id="BYZ-38-t0r" customClass="ViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5k-Bz-biC">
-                                <rect key="frame" x="115" y="123" width="163" height="35"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Navigate to yellow"/>
-                                <connections>
-                                    <segue destination="caF-DO-rAG" kind="show" id="0WB-ST-805"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
-                        <constraints>
-                            <constraint firstItem="g5k-Bz-biC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7gv-Vo-Tmu"/>
-                            <constraint firstItem="g5k-Bz-biC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="MfH-tU-yJd"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Cns-3o-4bp"/>
+                    <navigationItem key="navigationItem" title="Blue" id="Cns-3o-4bp">
+                        <barButtonItem key="rightBarButtonItem" title="Yellow" id="Igu-QW-c4c">
+                            <connections>
+                                <segue destination="caF-DO-rAG" kind="show" id="MIH-uK-ezt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1193" y="17"/>
+            <point key="canvasLocation" x="1175" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow-->
         <scene sceneID="MUj-Kf-qch">
             <objects>
-                <viewController id="caF-DO-rAG" sceneMemberID="viewController">
+                <viewController title="Yellow" id="caF-DO-rAG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0fK-HH-Qzy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="MEP-DD-wyu"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vmb-eK-XGx"/>
+                    <navigationItem key="navigationItem" title="Yellow" id="Vmb-eK-XGx">
+                        <barButtonItem key="rightBarButtonItem" title="Green" id="XlY-Hc-q1z">
+                            <connections>
+                                <segue destination="iSE-2E-AIC" kind="show" id="hII-1D-E5G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOQ-Pq-8Kq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2077" y="0.0"/>
+            <point key="canvasLocation" x="1987" y="0.0"/>
+        </scene>
+        <!--Green-->
+        <scene sceneID="rXe-r6-dwq">
+            <objects>
+                <viewController title="Green" id="iSE-2E-AIC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rC3-Xu-3rS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nLj-Au-IQg"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Green" id="bpk-vB-fbv">
+                        <barButtonItem key="rightBarButtonItem" title="Purple" id="JSh-FO-gmi">
+                            <connections>
+                                <segue destination="crl-Lg-miX" kind="show" id="v0e-6T-gAw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PtA-i8-JDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2810" y="0.0"/>
+        </scene>
+        <!--Purple-->
+        <scene sceneID="ht1-nm-yla">
+            <objects>
+                <viewController title="Purple" id="crl-Lg-miX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yVW-ih-N1a">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X99-sN-xcg">
+                                <rect key="frame" x="178" y="123" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fhR-s8-Fos"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="X99-sN-xcg" firstAttribute="top" secondItem="fhR-s8-Fos" secondAttribute="top" constant="20" id="1hQ-PC-9DN"/>
+                            <constraint firstItem="X99-sN-xcg" firstAttribute="centerX" secondItem="yVW-ih-N1a" secondAttribute="centerX" id="Lxv-hM-0c6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Purple" id="JNT-xi-xUX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uvk-zu-kPO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3682" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lyS-Ol-ZJq">
@@ -74,8 +120,14 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
