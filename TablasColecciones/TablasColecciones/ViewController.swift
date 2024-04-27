@@ -18,16 +18,31 @@ class ViewController: UIViewController {
         
         myTableView.dataSource = self
         myTableView.delegate = self
-        myTableView.tableFooterView = UIView()
 
         myTableView.register(UINib(nibName: "MyCustomTableViewCell", bundle: nil), forCellReuseIdentifier: "myCustomCell")
     }
 }
 
 extension ViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Celdas simples"
+        } else {
+            return "Celdas custom"
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myContries.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 0 {
+            return "Footer para celdas simples"
+        } else {
+            return "Footer para celdas custom"
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
