@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         myTableView.dataSource = self
+        myTableView.delegate = self
         myTableView.tableFooterView = UIView()
     }
 }
@@ -33,9 +34,19 @@ extension ViewController: UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: "myCell")
             cell?.backgroundColor = .gray
             cell?.textLabel?.font = UIFont.systemFont(ofSize: 20)
+            cell?.accessoryType = .disclosureIndicator
+
+
         }
 
         cell!.textLabel?.text = myContries[indexPath.row]
         return cell!
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Seleccionaste el país: \(myContries[indexPath.row])")
     }
 }
