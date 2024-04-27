@@ -30,23 +30,27 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "VCYellow" {
-            if let destiny = segue.destination as? YellowViewController {
-                destiny.titulo = "Amarillo"
-            }
+        var titulo: String = ""
+        var color: UIColor = .white
+        switch segue.identifier {
+            case "VCYellow" :
+                titulo = "Amarillo"
+                color = .yellow
+            case "VCGreen":
+                titulo = "Verde"
+                color = .green
+            case "VCPurple":
+                titulo = "Morado"
+                color = .purple
+            default:
+                titulo = ""
+                color = .white
         }
-
-        if segue.identifier == "VCGreen" {
-            if let destiny = segue.destination as? GreenViewController {
-                destiny.titulo = "Verde"
-            }
+        
+        if let destiny = segue.destination as? SecondaryViewController {
+            destiny.titulo = titulo
+            destiny.colorFondo = color
         }
-
-        if segue.identifier == "VCPurple" {
-            if let destiny = segue.destination as? PurpleViewController {
-                destiny.titulo = "Morado"
-            }
-        }        
     }
 }
 

@@ -7,15 +7,15 @@
 
 import UIKit
 
-class YellowViewController: UIViewController {
+class SecondaryViewController: UIViewController {
     
-    var titulo: String?
+    var titulo: String = ""
+    var colorFondo: UIColor = .white
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let capturedTitle = titulo {
-            self.title = capturedTitle
-        }
+        self.title = titulo
+        view.backgroundColor = colorFondo
     }
 }

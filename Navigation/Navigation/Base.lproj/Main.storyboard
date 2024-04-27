@@ -67,7 +67,7 @@
         <!--Yellow-->
         <scene sceneID="MUj-Kf-qch">
             <objects>
-                <viewController title="Yellow" id="caF-DO-rAG" customClass="YellowViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="caF-DO-rAG" customClass="SecondaryViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0fK-HH-Qzy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
