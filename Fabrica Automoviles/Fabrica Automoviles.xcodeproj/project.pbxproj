@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D75A038B2BE34EA400F0BCF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A038A2BE34EA400F0BCF4 /* DetailViewController.swift */; };
+		D75A038D2BE3503000F0BCF4 /* Mazda.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A038C2BE3503000F0BCF4 /* Mazda.swift */; };
 		D7B61B0F2BE1F22D003A3922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B61B0E2BE1F22D003A3922 /* AppDelegate.swift */; };
 		D7B61B112BE1F22D003A3922 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B61B102BE1F22D003A3922 /* SceneDelegate.swift */; };
 		D7B61B132BE1F22D003A3922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B61B122BE1F22D003A3922 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D75A038A2BE34EA400F0BCF4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D75A038C2BE3503000F0BCF4 /* Mazda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mazda.swift; sourceTree = "<group>"; };
 		D7B61B0B2BE1F22D003A3922 /* Fabrica Automoviles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fabrica Automoviles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B61B0E2BE1F22D003A3922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B61B102BE1F22D003A3922 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,11 +65,13 @@
 				D7B61B0E2BE1F22D003A3922 /* AppDelegate.swift */,
 				D7B61B102BE1F22D003A3922 /* SceneDelegate.swift */,
 				D7B61B122BE1F22D003A3922 /* ViewController.swift */,
+				D75A038A2BE34EA400F0BCF4 /* DetailViewController.swift */,
 				D7B61B222BE1F2B9003A3922 /* Automovil.swift */,
 				D7B61B142BE1F22D003A3922 /* Main.storyboard */,
 				D7B61B172BE1F22E003A3922 /* Assets.xcassets */,
 				D7B61B192BE1F22E003A3922 /* LaunchScreen.storyboard */,
 				D7B61B1C2BE1F22E003A3922 /* Info.plist */,
+				D75A038C2BE3503000F0BCF4 /* Mazda.swift */,
 			);
 			path = "Fabrica Automoviles";
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B61B132BE1F22D003A3922 /* ViewController.swift in Sources */,
+				D75A038D2BE3503000F0BCF4 /* Mazda.swift in Sources */,
 				D7B61B0F2BE1F22D003A3922 /* AppDelegate.swift in Sources */,
+				D75A038B2BE34EA400F0BCF4 /* DetailViewController.swift in Sources */,
 				D7B61B232BE1F2B9003A3922 /* Automovil.swift in Sources */,
 				D7B61B112BE1F22D003A3922 /* SceneDelegate.swift in Sources */,
 			);
