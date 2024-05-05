@@ -8,8 +8,13 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var image: UIImageView!
 
     var car: Int?
+
+    var autoNormal: Automovil?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +23,52 @@ class DetailViewController: UIViewController {
             switch auto {
                 case 0:
                     print("Creating a basic car")
+                    autoNormal = Automovil()
+                    label.text = "Se creo el auto básico correctamente"
                 case 1:
-                    print("Creating a Mazda")
+                    print("Creating an electric")
+                    autoNormal = AutoElectrico()
+                    label.text = "Se creo el auto eléctrico correctamente"
+                    
                 default:
                     print("Creating a car")
            }
+        }
+    }
+    
+    @IBAction func onClickShowInfo(_ sender: Any) {
+        if let auto = autoNormal {
+            if auto is AutoElectrico {
+                label.text = "Color: \(auto.color) \nLlantas: \(auto.numLlantas) \nPrecio: \(auto.precio) \nEncendido: \(auto.encendido) \nBatería: \(String(describing: (auto as! AutoElectrico).porcentajeBateria))"
+            } else {
+                label.text = "Color: \(auto.color) \nLlantas: \(auto.numLlantas) \nPrecio: \(auto.precio) \nEncendido: \(auto.encendido)"
+            }
+        }
+    }
+    
+    @IBAction func onClickTurnOn(_ sender: Any) {
+        if let auto = autoNormal {
+            if auto.encender() {
+                label.text = "Auto encendido"
+            } else {
+                label.text = "No se pudo encender el auto"
+            }
+        }
+    }
+    
+    @IBAction func onClickTurnOff(_ sender: Any) {
+        if let auto = autoNormal {
+            if auto.apagar() {
+                label.text = "Auto apagado"
+            } else {
+                label.text = "No se pudo apagar el auto"
+            }
+        }
+    }
+    
+    @IBAction func onClickAccelerate(_ sender: Any) {
+        if let auto = autoNormal {
+            label.text = auto.acelerar()
         }
     }
 }
