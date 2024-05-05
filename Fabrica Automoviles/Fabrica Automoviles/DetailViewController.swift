@@ -25,10 +25,12 @@ class DetailViewController: UIViewController {
                     print("Creating a basic car")
                     autoNormal = Automovil()
                     label.text = "Se creo el auto básico correctamente"
+                    image.image = UIImage(named: "auto")
                 case 1:
                     print("Creating an electric")
                     autoNormal = AutoElectrico()
                     label.text = "Se creo el auto eléctrico correctamente"
+                    image.image = UIImage(named: "bugati")
                     
                 default:
                     print("Creating a car")
