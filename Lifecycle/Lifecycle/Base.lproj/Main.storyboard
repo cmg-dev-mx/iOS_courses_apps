@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="1611" y="-18"/>
         </scene>
-        <!--View Controller-->
+        <!--Secondary View Controller-->
         <scene sceneID="OwV-VC-eS4">
             <objects>
-                <viewController id="096-ww-Gho" sceneMemberID="viewController">
+                <viewController id="096-ww-Gho" customClass="SecondaryViewController" customModule="Lifecycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6q5-6t-gfM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
