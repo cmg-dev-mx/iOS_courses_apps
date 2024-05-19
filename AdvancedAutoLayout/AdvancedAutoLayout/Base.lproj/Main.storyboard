@@ -20,7 +20,7 @@
                                 <rect key="frame" x="16" y="119" width="361" height="683"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P9-lB-aEP">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="341.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="227.66666666666666"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constraints de posición"/>
                                         <connections>
@@ -28,11 +28,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qld-Hh-G51">
-                                        <rect key="frame" x="0.0" y="341.66666666666674" width="361" height="341.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="227.66666666666669" width="361" height="227.66666666666669"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constraints de altura y anchura"/>
                                         <connections>
                                             <segue destination="Psy-eB-31m" kind="show" id="j2M-Cd-hE4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kL-68-Ggq">
+                                        <rect key="frame" x="0.0" y="455.33333333333343" width="361" height="227.66666666666669"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Modificar constraints por código"/>
+                                        <connections>
+                                            <segue destination="XXe-9W-iK9" kind="show" id="5wl-ID-ecb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,7 +89,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVX-p1-Ty0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="420"/>
+            <point key="canvasLocation" x="2228" y="139"/>
+        </scene>
+        <!--Modificar constraints por código-->
+        <scene sceneID="7cS-8m-H7r">
+            <objects>
+                <viewController title="Modificar constraints por código" id="XXe-9W-iK9" customClass="ModifyConstraintsViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kIy-cJ-ABw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdj-tk-mNM">
+                                <rect key="frame" x="16" y="119" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="UsG-j5-Wme"/>
+                                    <constraint firstAttribute="height" constant="100" id="cTa-Xt-gk8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pqz-Mm-DIA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xdj-tk-mNM" firstAttribute="leading" secondItem="Pqz-Mm-DIA" secondAttribute="leading" constant="16" id="Q01-1d-duW"/>
+                            <constraint firstItem="Xdj-tk-mNM" firstAttribute="top" secondItem="Pqz-Mm-DIA" secondAttribute="top" constant="16" id="i1W-0e-luh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Modificar constraints por código" id="pYF-P6-QBR"/>
+                    <connections>
+                        <outlet property="heightConstraint" destination="cTa-Xt-gk8" id="5ca-fQ-os3"/>
+                        <outlet property="topConstraints" destination="i1W-0e-luh" id="JLE-t0-d9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6h-yj-jrn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128" y="934"/>
         </scene>
         <!--Constraints de posicion-->
         <scene sceneID="bCl-bl-m8H">
@@ -129,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvK-Xc-GPv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="-288"/>
+            <point key="canvasLocation" x="2008" y="-536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VDn-2A-Hh2">
