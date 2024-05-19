@@ -14,6 +14,7 @@
 		D77516252BFA4AF8002CAE7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77516242BFA4AF8002CAE7C /* Assets.xcassets */; };
 		D77516282BFA4AF8002CAE7C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D77516272BFA4AF8002CAE7C /* Base */; };
 		D77516302BFA5A3B002CAE7C /* ModifyConstraintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D775162F2BFA5A3B002CAE7C /* ModifyConstraintsViewController.swift */; };
+		D77516322BFA5BE4002CAE7C /* CreateConstraintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77516312BFA5BE4002CAE7C /* CreateConstraintsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D77516272BFA4AF8002CAE7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D77516292BFA4AF8002CAE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D775162F2BFA5A3B002CAE7C /* ModifyConstraintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyConstraintsViewController.swift; sourceTree = "<group>"; };
+		D77516312BFA5BE4002CAE7C /* CreateConstraintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateConstraintsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				D77516262BFA4AF8002CAE7C /* LaunchScreen.storyboard */,
 				D77516292BFA4AF8002CAE7C /* Info.plist */,
 				D775162F2BFA5A3B002CAE7C /* ModifyConstraintsViewController.swift */,
+				D77516312BFA5BE4002CAE7C /* CreateConstraintsViewController.swift */,
 			);
 			path = AdvancedAutoLayout;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77516322BFA5BE4002CAE7C /* CreateConstraintsViewController.swift in Sources */,
 				D77516202BFA4AF7002CAE7C /* ViewController.swift in Sources */,
 				D775161C2BFA4AF7002CAE7C /* AppDelegate.swift in Sources */,
 				D775161E2BFA4AF7002CAE7C /* SceneDelegate.swift in Sources */,
