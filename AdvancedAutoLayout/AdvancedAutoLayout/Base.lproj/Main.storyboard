@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Autolayout avanzado-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Autolayout avanzado" id="BYZ-38-t0r" customClass="ViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P9-lB-aEP">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="683"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Constraints de posición"/>
+                                        <connections>
+                                            <segue destination="fkn-kB-lzm" kind="show" id="drw-kL-EB6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -36,11 +39,59 @@
                             <constraint firstItem="dA0-tt-yJv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="nWm-lq-CTk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="a5v-7C-twx"/>
+                    <navigationItem key="navigationItem" title="Autolayout avanzado" id="a5v-7C-twx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="967" y="125"/>
+        </scene>
+        <!--Constraints de posicion-->
+        <scene sceneID="bCl-bl-m8H">
+            <objects>
+                <viewController title="Constraints de posicion" id="fkn-kB-lzm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FrA-ev-1Xe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7K-Jw-OAT">
+                                <rect key="frame" x="0.0" y="103" width="393" height="315"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwN-QB-SBi">
+                                        <rect key="frame" x="100" y="100" width="193" height="265"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="lwN-QB-SBi" firstAttribute="leading" secondItem="V7K-Jw-OAT" secondAttribute="leading" constant="100" id="8KG-It-tyh"/>
+                                    <constraint firstItem="lwN-QB-SBi" firstAttribute="top" secondItem="V7K-Jw-OAT" secondAttribute="top" constant="100" id="Kqs-q4-i0B"/>
+                                    <constraint firstAttribute="trailing" secondItem="lwN-QB-SBi" secondAttribute="trailing" constant="100" id="THK-1I-tuj"/>
+                                    <constraint firstAttribute="bottom" secondItem="lwN-QB-SBi" secondAttribute="bottom" constant="-50" id="y5P-pd-wy5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4V-vK-lXD">
+                                <rect key="frame" x="16" y="434" width="68" height="368"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c81-NF-5MI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z4V-vK-lXD" firstAttribute="leading" secondItem="c81-NF-5MI" secondAttribute="leading" constant="16" id="7su-RH-ZTE"/>
+                            <constraint firstItem="V7K-Jw-OAT" firstAttribute="top" secondItem="c81-NF-5MI" secondAttribute="top" id="GQK-OL-ShB"/>
+                            <constraint firstItem="z4V-vK-lXD" firstAttribute="top" secondItem="V7K-Jw-OAT" secondAttribute="bottom" constant="16" id="NV9-S2-xR5"/>
+                            <constraint firstItem="lwN-QB-SBi" firstAttribute="leading" secondItem="z4V-vK-lXD" secondAttribute="trailing" constant="16" id="QEc-ru-jHN"/>
+                            <constraint firstItem="c81-NF-5MI" firstAttribute="bottom" secondItem="z4V-vK-lXD" secondAttribute="bottom" constant="16" id="UQR-up-c4I"/>
+                            <constraint firstItem="V7K-Jw-OAT" firstAttribute="leading" secondItem="c81-NF-5MI" secondAttribute="leading" id="ZYc-33-ahF"/>
+                            <constraint firstItem="c81-NF-5MI" firstAttribute="trailing" secondItem="V7K-Jw-OAT" secondAttribute="trailing" id="e7t-6P-1i3"/>
+                            <constraint firstItem="c81-NF-5MI" firstAttribute="bottom" secondItem="V7K-Jw-OAT" secondAttribute="bottom" constant="400" id="noR-jy-cF0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Constraints de posición" id="aup-oJ-bbK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvK-Xc-GPv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878.6259541984732" y="143.66197183098592"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VDn-2A-Hh2">
@@ -62,6 +113,15 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
