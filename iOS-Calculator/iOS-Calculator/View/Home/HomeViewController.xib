@@ -10,6 +10,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="iOS_Calculator" customModuleProvider="target">
             <connections>
+                <outlet property="addition" destination="c6k-pq-dte" id="BEI-0a-AA8"/>
+                <outlet property="clean" destination="3wI-j0-MRk" id="ogu-RE-Ank"/>
+                <outlet property="comma" destination="iA9-40-qtC" id="fp1-4r-eCE"/>
+                <outlet property="division" destination="laP-BF-b2S" id="8yC-bV-MhA"/>
+                <outlet property="equals" destination="20V-7T-cLc" id="wXm-cQ-f3M"/>
+                <outlet property="multiplication" destination="tZj-cf-uob" id="FFK-Z5-bYs"/>
+                <outlet property="number0" destination="aht-Ml-2PA" id="Ddd-9A-qDd"/>
+                <outlet property="number1" destination="vY5-hE-G8c" id="bm7-kJ-75G"/>
+                <outlet property="number2" destination="hGk-fK-Kwj" id="Qsw-gm-SlE"/>
+                <outlet property="number3" destination="p61-E6-Rn3" id="5ja-zF-4Kf"/>
+                <outlet property="number4" destination="0YS-5s-0wA" id="ffg-7D-1Vr"/>
+                <outlet property="number5" destination="qCq-gt-clF" id="FVb-Cu-Vek"/>
+                <outlet property="number6" destination="9z9-kX-saC" id="GwX-91-P81"/>
+                <outlet property="number7" destination="mdY-uU-CiG" id="3Bv-nb-c6D"/>
+                <outlet property="number8" destination="D4f-P7-U11" id="boa-ab-dgr"/>
+                <outlet property="number9" destination="OHX-Ah-ghc" id="mVQ-R7-jl3"/>
+                <outlet property="percentage" destination="aje-uL-D0G" id="Ar3-yJ-Twk"/>
+                <outlet property="resultLabel" destination="XjY-eR-GA8" id="Q3k-GE-XyB"/>
+                <outlet property="substraction" destination="3Pl-T6-Ajz" id="f7h-t9-zJF"/>
+                <outlet property="toggleSign" destination="PAc-jh-XZT" id="p40-FS-3xg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
