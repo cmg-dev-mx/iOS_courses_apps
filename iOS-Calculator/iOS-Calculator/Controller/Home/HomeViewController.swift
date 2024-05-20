@@ -49,4 +49,37 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: Button actions
+    
+    @IBAction func cleanAction(_ sender: Any) {
+    }
+    
+    @IBAction func toggleSignAction(_ sender: Any) {
+    }
+    
+    @IBAction func percentageAction(_ sender: Any) {
+    }
+    
+    @IBAction func divisionAction(_ sender: Any) {
+    }
+    
+    @IBAction func multiplicationAction(_ sender: Any) {
+    }
+    
+    @IBAction func substractionAction(_ sender: Any) {
+    }
+    
+    @IBAction func additionAction(_ sender: Any) {
+    }
+    
+    @IBAction func equalsAction(_ sender: Any) {
+    }
+    
+    @IBAction func commaAction(_ sender: Any) {
+    }
+    
+    @IBAction func numberAction(_ sender: UIButton) {
+        print(sender.tag)
+    }
 }
