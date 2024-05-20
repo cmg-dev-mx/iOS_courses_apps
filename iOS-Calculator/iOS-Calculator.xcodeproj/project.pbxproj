@@ -10,6 +10,8 @@
 		D76196822BFAD1CD0097CA0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76196812BFAD1CD0097CA0E /* AppDelegate.swift */; };
 		D761968B2BFAD1CD0097CA0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D761968A2BFAD1CD0097CA0E /* Assets.xcassets */; };
 		D761968E2BFAD1CD0097CA0E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D761968D2BFAD1CD0097CA0E /* Base */; };
+		D76196A32BFADA1C0097CA0E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76196A22BFADA1C0097CA0E /* HomeViewController.xib */; };
+		D76196A42BFADA1C0097CA0E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76196A12BFADA1C0097CA0E /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		D761968A2BFAD1CD0097CA0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D761968D2BFAD1CD0097CA0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D761968F2BFAD1CD0097CA0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76196A12BFADA1C0097CA0E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D76196A22BFADA1C0097CA0E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				D76196812BFAD1CD0097CA0E /* AppDelegate.swift */,
+				D76196982BFAD6DD0097CA0E /* Model */,
+				D76196962BFAD6920097CA0E /* View */,
+				D76196972BFAD6D60097CA0E /* Controller */,
+				D76196992BFAD6E80097CA0E /* Util */,
 				D761968A2BFAD1CD0097CA0E /* Assets.xcassets */,
-				D761968C2BFAD1CD0097CA0E /* LaunchScreen.storyboard */,
 				D76196952BFAD29F0097CA0E /* Supporting Files */,
 			);
 			path = "iOS-Calculator";
@@ -64,6 +71,61 @@
 				D761968F2BFAD1CD0097CA0E /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D76196962BFAD6920097CA0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D761969B2BFAD7310097CA0E /* Launch */,
+				D761969C2BFAD9920097CA0E /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D76196972BFAD6D60097CA0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D761969E2BFAD9CA0097CA0E /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D76196982BFAD6DD0097CA0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D76196992BFAD6E80097CA0E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D761969B2BFAD7310097CA0E /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				D761968C2BFAD1CD0097CA0E /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		D761969C2BFAD9920097CA0E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D76196A22BFADA1C0097CA0E /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D761969E2BFAD9CA0097CA0E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D76196A12BFADA1C0097CA0E /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +188,7 @@
 			files = (
 				D761968B2BFAD1CD0097CA0E /* Assets.xcassets in Resources */,
 				D761968E2BFAD1CD0097CA0E /* Base in Resources */,
+				D76196A32BFADA1C0097CA0E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76196822BFAD1CD0097CA0E /* AppDelegate.swift in Sources */,
+				D76196A42BFADA1C0097CA0E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
