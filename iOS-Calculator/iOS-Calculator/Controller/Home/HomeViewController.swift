@@ -50,8 +50,6 @@ final class HomeViewController: UIViewController {
 
     private let kDecimalSeparator = Locale.current.decimalSeparator!
     private let kMaxLength = 9
-    private let kMaxValue: Double = 999999999
-    private let kMinValue: Double = 0.00000001
 
     // MARK: - Formateo de valores
     private let auxFormatter: NumberFormatter = {
@@ -60,6 +58,9 @@ final class HomeViewController: UIViewController {
         formatter.groupingSeparator = ""
         formatter.decimalSeparator = locale.decimalSeparator
         formatter.numberStyle = .decimal
+        formatter.maximumIntegerDigits = 100
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 100
         return formatter
     }()
 
@@ -73,6 +74,24 @@ final class HomeViewController: UIViewController {
         formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 8
         return formatter
+    }()
+
+    private let printScientificFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .scientific
+        formatter.maximumFractionDigits = 3
+        formatter.exponentSymbol = "e"
+        return formatter
+    }()
+
+    private let auxTotalFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = ""
+        formatter.decimalSeparator = ""
+        formatter.numberStyle = .decimal
+        formatter.maximumIntegerDigits = 100
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 100
     }()
 
     // MARK: - Initialization
@@ -173,7 +192,7 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func commaAction(_ sender: UIButton) {
-        let currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
+        let currentTemp = auxTotalFormatter.string(from: NSNumber(value: temp))!
         if !operating && currentTemp.count >= kMaxLength {
             return
         }
@@ -186,10 +205,12 @@ final class HomeViewController: UIViewController {
     @IBAction func numberAction(_ sender: UIButton) {
         clean.setTitle("C", for: .normal)
 
-        var currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
+        var currentTemp = auxTotalFormatter.string(from: NSNumber(value: temp))!
         if !operating && currentTemp.count >= kMaxLength {
             return
         }
+
+        currentTemp = auxFormatter.string(from: NSNumber(value: temp))!
 
         // Hemos seleccionado una operacion
         if operating {
@@ -247,9 +268,13 @@ final class HomeViewController: UIViewController {
             break
         }
         // Formateo en pantalla
-        if total <= kMaxValue && total >= kMinValue {
+        if let currentTotal = auxTotalFormatter.string(from: NSNumber(value: total)), currentTotal.count > kMaxLength {
+            resultLabel.text = printScientificFormatter.string(from: NSNumber(value: total))
+        } else {
             resultLabel.text = printFormatter.string(from: NSNumber(value: total))
         }
+
+        operation = .none
 
         print("Total: \(total)")
     }
