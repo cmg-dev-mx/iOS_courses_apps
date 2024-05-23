@@ -92,6 +92,7 @@ final class HomeViewController: UIViewController {
         formatter.maximumIntegerDigits = 100
         formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 100
+        return formatter
     }()
 
     // MARK: - Initialization
@@ -159,30 +160,46 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func divisionAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .division
+
+        sender.selectOperation(true)
         sender.shine()
     }
     
     @IBAction func multiplicationAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .multiplication
+
+        sender.selectOperation(true)
         sender.shine()
     }
     
     @IBAction func substractionAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .substraction
+
+        sender.selectOperation(true)
         sender.shine()
     }
     
     @IBAction func additionAction(_ sender: UIButton) {
-        result()
+        if operation != .none {
+            result()
+        }
         operating = true
         operation = .addition
+
+        sender.selectOperation(true)
         sender.shine()
     }
     
@@ -199,6 +216,9 @@ final class HomeViewController: UIViewController {
 
         resultLabel.text = resultLabel.text! + kDecimalSeparator
         decimal = true
+
+        selectVisualOperation()
+
         sender.shine()
     }
     
@@ -228,6 +248,8 @@ final class HomeViewController: UIViewController {
         let number = sender.tag
         temp = Double(currentTemp + String(number))!
         resultLabel.text = printFormatter.string(from: NSNumber(value: temp))
+
+        selectVisualOperation()
 
         sender.shine()
         print(sender.tag)
@@ -276,6 +298,47 @@ final class HomeViewController: UIViewController {
 
         operation = .none
 
+        selectVisualOperation()
+
         print("Total: \(total)")
+    }
+
+    private func selectVisualOperation() {
+        if !operating {
+            return
+        }
+
+        switch operation {
+        case .none, .percentage:
+            addition.selectOperation(false)
+            substraction.selectOperation(false)
+            multiplication.selectOperation(false)
+            division.selectOperation(false)
+            break
+        case .addition:
+            addition.selectOperation(true)
+            substraction.selectOperation(false)
+            multiplication.selectOperation(false)
+            division.selectOperation(false)
+            break
+        case .substraction:
+            addition.selectOperation(false)
+            substraction.selectOperation(true)
+            multiplication.selectOperation(false)
+            division.selectOperation(false)
+            break
+        case .multiplication:
+            addition.selectOperation(false)
+            substraction.selectOperation(false)
+            multiplication.selectOperation(true)
+            division.selectOperation(false)
+            break
+        case .division:
+            addition.selectOperation(false)
+            substraction.selectOperation(false)
+            multiplication.selectOperation(false)
+            division.selectOperation(true)
+            break
+        }
     }
 }
