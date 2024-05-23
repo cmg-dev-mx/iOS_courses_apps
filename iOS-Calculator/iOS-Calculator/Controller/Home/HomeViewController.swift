@@ -48,38 +48,67 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        number0.round()
+        number1.round()
+        number2.round()
+        number3.round()
+        number4.round()
+        number5.round()
+        number6.round()
+        number7.round()
+        number8.round()
+        number9.round()
+        comma.round()
+        addition.round()
+        substraction.round()
+        multiplication.round()
+        division.round()
+        percentage.round()
+        toggleSign.round()
+        equals.round()
+        clean.round()
     }
     
     // MARK: Button actions
     
-    @IBAction func cleanAction(_ sender: Any) {
+    @IBAction func cleanAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func toggleSignAction(_ sender: Any) {
+    @IBAction func toggleSignAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func percentageAction(_ sender: Any) {
+    @IBAction func percentageAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func divisionAction(_ sender: Any) {
+    @IBAction func divisionAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func multiplicationAction(_ sender: Any) {
+    @IBAction func multiplicationAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func substractionAction(_ sender: Any) {
+    @IBAction func substractionAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func additionAction(_ sender: Any) {
+    @IBAction func additionAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func equalsAction(_ sender: Any) {
+    @IBAction func equalsAction(_ sender: UIButton) {
+        sender.shine()
     }
     
-    @IBAction func commaAction(_ sender: Any) {
+    @IBAction func commaAction(_ sender: UIButton) {
+        sender.shine()
     }
     
     @IBAction func numberAction(_ sender: UIButton) {
+        sender.shine()
         print(sender.tag)
     }
 }
