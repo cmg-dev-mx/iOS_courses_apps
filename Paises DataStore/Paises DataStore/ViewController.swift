@@ -90,6 +90,23 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Pais: \(myCountries![indexPath.row])")
+
+        // 6. Añadir funcionalidad para editar
+        let alert = UIAlertController(title: "Editar Pais", message: "Ingresa el nuevo nombre del pais", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.text = self.myCountries![indexPath.row].nombre
+        }
+        let botonEditar = UIAlertAction(title: "Editar", style: .default) { (action) in
+            self.myCountries![indexPath.row].nombre = alert.textFields![0].text
+            do {
+                try self.context.save()
+                self.recuperarDatos()
+            } catch {
+                print("Error editando datos")
+            }
+        }
+        alert.addAction(botonEditar)
+        present(alert, animated: true, completion: nil)
     }
 
     // 5. Añadir funcionalildad de swipe para eliminar
