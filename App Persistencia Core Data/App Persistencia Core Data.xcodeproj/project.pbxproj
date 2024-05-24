@@ -14,6 +14,8 @@
 		D74119B42C002ACB007FAF67 /* App_Persistencia_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D74119B22C002ACB007FAF67 /* App_Persistencia_Core_Data.xcdatamodeld */; };
 		D74119B62C002ACC007FAF67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74119B52C002ACC007FAF67 /* Assets.xcassets */; };
 		D74119B92C002ACC007FAF67 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D74119B82C002ACC007FAF67 /* Base */; };
+		D74119C62C002CE3007FAF67 /* ElementoLista+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74119C42C002CE3007FAF67 /* ElementoLista+CoreDataClass.swift */; };
+		D74119C72C002CE3007FAF67 /* ElementoLista+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74119C52C002CE3007FAF67 /* ElementoLista+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D74119B52C002ACC007FAF67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D74119B82C002ACC007FAF67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D74119BA2C002ACC007FAF67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74119C42C002CE3007FAF67 /* ElementoLista+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementoLista+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D74119C52C002CE3007FAF67 /* ElementoLista+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementoLista+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		D741199D2C002ACB007FAF67 = {
 			isa = PBXGroup;
 			children = (
+				D74119C82C002D33007FAF67 /* Model */,
 				D74119A82C002ACB007FAF67 /* App Persistencia Core Data */,
 				D74119A72C002ACB007FAF67 /* Products */,
 			);
@@ -68,6 +73,15 @@
 				D74119B22C002ACB007FAF67 /* App_Persistencia_Core_Data.xcdatamodeld */,
 			);
 			path = "App Persistencia Core Data";
+			sourceTree = "<group>";
+		};
+		D74119C82C002D33007FAF67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D74119C42C002CE3007FAF67 /* ElementoLista+CoreDataClass.swift */,
+				D74119C52C002CE3007FAF67 /* ElementoLista+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +158,8 @@
 				D74119AE2C002ACB007FAF67 /* ViewController.swift in Sources */,
 				D74119AA2C002ACB007FAF67 /* AppDelegate.swift in Sources */,
 				D74119B42C002ACB007FAF67 /* App_Persistencia_Core_Data.xcdatamodeld in Sources */,
+				D74119C62C002CE3007FAF67 /* ElementoLista+CoreDataClass.swift in Sources */,
+				D74119C72C002CE3007FAF67 /* ElementoLista+CoreDataProperties.swift in Sources */,
 				D74119AC2C002ACB007FAF67 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
