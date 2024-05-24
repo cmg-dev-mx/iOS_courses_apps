@@ -30,13 +30,41 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addBtnAction(_ sender: Any) {
-        print("Añadir Datos")
+        // Crear alerta
+        let alert = UIAlertController(title: "Agregar Pais", message: "Ingresa el nombre del pais", preferredStyle: .alert)
+
+        // Crear y configurar botón de alerta
+        let botonAlerta = UIAlertAction(title: "Añadir", style: .default) { (action) in
+            // Crear nuevo pais
+            let nuevoPais = Pais(context: self.context)
+            nuevoPais.nombre = alert.textFields![0].text
+            // Guardar pais
+            do {
+                try self.context.save()
+                self.recuperarDatos()
+            } catch {
+                print("Error guardando datos")
+            }
+        }
+
+        // Agregar botón a alerta
+        alert.addAction(botonAlerta)
+
+        // Agregar campo de texto a alerta
+        alert.addTextField { (textField) in
+            textField.placeholder = "Nombre del pais"
+        }
+
+        // Mostrar alerta
+        present(alert, animated: true, completion: nil)
     }
 
     private func recuperarDatos() {
         do {
             self.myCountries = try context.fetch(Pais.fetchRequest())
-            myTableView.reloadData()
+            DispatchQueue.main.async {
+                self.myTableView.reloadData()
+            }
         } catch {
             print("Error recuperando datos")
         }
