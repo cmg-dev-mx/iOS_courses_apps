@@ -11,9 +11,9 @@
 		D74119D82C0030AB007FAF67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74119D72C0030AB007FAF67 /* SceneDelegate.swift */; };
 		D74119DA2C0030AB007FAF67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74119D92C0030AB007FAF67 /* ViewController.swift */; };
 		D74119DD2C0030AB007FAF67 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D74119DC2C0030AB007FAF67 /* Base */; };
-		D74119E02C0030AB007FAF67 /* Paises_DataStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D74119DE2C0030AB007FAF67 /* Paises_DataStore.xcdatamodeld */; };
 		D74119E22C0030AC007FAF67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74119E12C0030AC007FAF67 /* Assets.xcassets */; };
 		D74119E52C0030AC007FAF67 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D74119E42C0030AC007FAF67 /* Base */; };
+		D74119EE2C0034DA007FAF67 /* PaisesDataStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D74119EC2C0034DA007FAF67 /* PaisesDataStore.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +22,10 @@
 		D74119D72C0030AB007FAF67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D74119D92C0030AB007FAF67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D74119DC2C0030AB007FAF67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D74119DF2C0030AB007FAF67 /* Paises_DataStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Paises_DataStore.xcdatamodel; sourceTree = "<group>"; };
 		D74119E12C0030AC007FAF67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D74119E42C0030AC007FAF67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D74119E62C0030AC007FAF67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74119ED2C0034DA007FAF67 /* PaisesDataStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaisesDataStore.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				D74119E12C0030AC007FAF67 /* Assets.xcassets */,
 				D74119E32C0030AC007FAF67 /* LaunchScreen.storyboard */,
 				D74119E62C0030AC007FAF67 /* Info.plist */,
-				D74119DE2C0030AB007FAF67 /* Paises_DataStore.xcdatamodeld */,
+				D74119EC2C0034DA007FAF67 /* PaisesDataStore.xcdatamodeld */,
 			);
 			path = "Paises DataStore";
 			sourceTree = "<group>";
@@ -141,8 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D74119E02C0030AB007FAF67 /* Paises_DataStore.xcdatamodeld in Sources */,
 				D74119DA2C0030AB007FAF67 /* ViewController.swift in Sources */,
+				D74119EE2C0034DA007FAF67 /* PaisesDataStore.xcdatamodeld in Sources */,
 				D74119D62C0030AB007FAF67 /* AppDelegate.swift in Sources */,
 				D74119D82C0030AB007FAF67 /* SceneDelegate.swift in Sources */,
 			);
@@ -369,13 +369,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D74119DE2C0030AB007FAF67 /* Paises_DataStore.xcdatamodeld */ = {
+		D74119EC2C0034DA007FAF67 /* PaisesDataStore.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D74119DF2C0030AB007FAF67 /* Paises_DataStore.xcdatamodel */,
+				D74119ED2C0034DA007FAF67 /* PaisesDataStore.xcdatamodel */,
 			);
-			currentVersion = D74119DF2C0030AB007FAF67 /* Paises_DataStore.xcdatamodel */;
-			path = Paises_DataStore.xcdatamodeld;
+			currentVersion = D74119ED2C0034DA007FAF67 /* PaisesDataStore.xcdatamodel */;
+			name = PaisesDataStore.xcdatamodeld;
+			path = "/Users/shell/Projects/Personal/iOS/iOS_courses_apps/Paises DataStore/Paises DataStore/PaisesDataStore.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
