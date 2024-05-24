@@ -14,6 +14,8 @@
 		D74119E22C0030AC007FAF67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74119E12C0030AC007FAF67 /* Assets.xcassets */; };
 		D74119E52C0030AC007FAF67 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D74119E42C0030AC007FAF67 /* Base */; };
 		D74119EE2C0034DA007FAF67 /* PaisesDataStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D74119EC2C0034DA007FAF67 /* PaisesDataStore.xcdatamodeld */; };
+		D74119F12C0038F5007FAF67 /* Pais+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74119EF2C0038F5007FAF67 /* Pais+CoreDataClass.swift */; };
+		D74119F22C0038F5007FAF67 /* Pais+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74119F02C0038F5007FAF67 /* Pais+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D74119E42C0030AC007FAF67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D74119E62C0030AC007FAF67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74119ED2C0034DA007FAF67 /* PaisesDataStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaisesDataStore.xcdatamodel; sourceTree = "<group>"; };
+		D74119EF2C0038F5007FAF67 /* Pais+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pais+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D74119F02C0038F5007FAF67 /* Pais+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pais+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		D74119C92C0030AB007FAF67 = {
 			isa = PBXGroup;
 			children = (
+				D74119EF2C0038F5007FAF67 /* Pais+CoreDataClass.swift */,
+				D74119F02C0038F5007FAF67 /* Pais+CoreDataProperties.swift */,
 				D74119D42C0030AB007FAF67 /* Paises DataStore */,
 				D74119D32C0030AB007FAF67 /* Products */,
 			);
@@ -143,6 +149,8 @@
 			files = (
 				D74119DA2C0030AB007FAF67 /* ViewController.swift in Sources */,
 				D74119EE2C0034DA007FAF67 /* PaisesDataStore.xcdatamodeld in Sources */,
+				D74119F12C0038F5007FAF67 /* Pais+CoreDataClass.swift in Sources */,
+				D74119F22C0038F5007FAF67 /* Pais+CoreDataProperties.swift in Sources */,
 				D74119D62C0030AB007FAF67 /* AppDelegate.swift in Sources */,
 				D74119D82C0030AB007FAF67 /* SceneDelegate.swift in Sources */,
 			);
