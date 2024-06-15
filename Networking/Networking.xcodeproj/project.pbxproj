@@ -17,6 +17,7 @@
 		D7755A112C1E288100087945 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D7755A102C1E288100087945 /* Alamofire */; };
 		D7755A132C1E288100087945 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D7755A122C1E288100087945 /* AlamofireDynamic */; };
 		D7755A152C1E28B900087945 /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7755A142C1E28B900087945 /* NetworkingProvider.swift */; };
+		D7755A192C1E378D00087945 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7755A182C1E378D00087945 /* UserResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D7755A072C1E25A600087945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7755A092C1E25A600087945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7755A142C1E28B900087945 /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		D7755A182C1E378D00087945 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		D77559F72C1E25A600087945 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D7755A162C1E369C00087945 /* Network */,
 				D77559F82C1E25A600087945 /* AppDelegate.swift */,
 				D77559FA2C1E25A600087945 /* SceneDelegate.swift */,
 				D77559FC2C1E25A600087945 /* ViewController.swift */,
@@ -72,9 +75,25 @@
 				D7755A062C1E25A600087945 /* LaunchScreen.storyboard */,
 				D7755A092C1E25A600087945 /* Info.plist */,
 				D7755A012C1E25A600087945 /* Networking.xcdatamodeld */,
-				D7755A142C1E28B900087945 /* NetworkingProvider.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		D7755A162C1E369C00087945 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D7755A172C1E36B000087945 /* Data */,
+				D7755A142C1E28B900087945 /* NetworkingProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D7755A172C1E36B000087945 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D7755A182C1E378D00087945 /* UserResponse.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +179,7 @@
 				D77559FB2C1E25A600087945 /* SceneDelegate.swift in Sources */,
 				D7755A152C1E28B900087945 /* NetworkingProvider.swift in Sources */,
 				D7755A032C1E25A600087945 /* Networking.xcdatamodeld in Sources */,
+				D7755A192C1E378D00087945 /* UserResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
