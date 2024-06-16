@@ -30,4 +30,18 @@ final class NetworkingProvider {
             }
     }
 
+    func getTodo(id: Int) {
+        let url = "\(kBaseUrl)todos/\(id)"
+
+        AF.request(url, method: .get)
+            .validate(statusCode: kStatusOk)
+            .responseDecodable(of: TodoResponse.self, decoder: DateDecoder()) { response in
+                if let todo = response.value {
+                    print(todo)
+                    print(todo.dueOn)
+                } else {
+                    print(response.error?.localizedDescription ?? "Error")
+                }
+            }
+    }
 }

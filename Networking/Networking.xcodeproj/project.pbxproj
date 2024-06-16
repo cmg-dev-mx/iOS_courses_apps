@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D76150032C1E730100E1B211 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D76150022C1E730100E1B211 /* Alamofire */; };
+		D76150062C1E829800E1B211 /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76150052C1E829800E1B211 /* DateDecoder.swift */; };
+		D76150082C1E840F00E1B211 /* TodoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76150072C1E840F00E1B211 /* TodoResponse.swift */; };
 		D77559F92C1E25A600087945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77559F82C1E25A600087945 /* AppDelegate.swift */; };
 		D77559FB2C1E25A600087945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77559FA2C1E25A600087945 /* SceneDelegate.swift */; };
 		D77559FD2C1E25A600087945 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77559FC2C1E25A600087945 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D76150052C1E829800E1B211 /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
+		D76150072C1E840F00E1B211 /* TodoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoResponse.swift; sourceTree = "<group>"; };
 		D77559F52C1E25A600087945 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77559F82C1E25A600087945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D77559FA2C1E25A600087945 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D76150042C1E828700E1B211 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				D76150052C1E829800E1B211 /* DateDecoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
 		D77559EC2C1E25A600087945 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +92,7 @@
 		D7755A162C1E369C00087945 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D76150042C1E828700E1B211 /* Decoder */,
 				D7755A172C1E36B000087945 /* Data */,
 				D7755A142C1E28B900087945 /* NetworkingProvider.swift */,
 			);
@@ -90,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D7755A182C1E378D00087945 /* UserResponse.swift */,
+				D76150072C1E840F00E1B211 /* TodoResponse.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -171,7 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76150062C1E829800E1B211 /* DateDecoder.swift in Sources */,
 				D77559FD2C1E25A600087945 /* ViewController.swift in Sources */,
+				D76150082C1E840F00E1B211 /* TodoResponse.swift in Sources */,
 				D77559F92C1E25A600087945 /* AppDelegate.swift in Sources */,
 				D77559FB2C1E25A600087945 /* SceneDelegate.swift in Sources */,
 				D7755A152C1E28B900087945 /* NetworkingProvider.swift in Sources */,
