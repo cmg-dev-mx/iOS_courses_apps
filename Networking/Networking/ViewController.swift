@@ -25,9 +25,9 @@ class ViewController: UIViewController {
         activityIndicator.startAnimating()
 
         NetworkingProvider.shared
-            .getUser(id: 6940081, success: { user in
+            .getUser(id: 6965768, success: { user in
                 self.activityIndicator.stopAnimating()
-                self.titleLb.text = user.name
+                self.titleLb.text = "\(user.id?.description ?? ""): \(user.name?.description ?? "")"
                 self.descriptionLb.text = user.email
             }, failure: { error in
                 self.activityIndicator.stopAnimating()
@@ -43,6 +43,22 @@ class ViewController: UIViewController {
                 self.activityIndicator.stopAnimating()
                 self.titleLb.text = todo.title
                 self.descriptionLb.text = "\(todo.dueOn)"
+            }, failure: { error in
+                self.activityIndicator.stopAnimating()
+                print(error)
+            })
+    }
+
+    @IBAction func addUserAction(_ sender: Any) {
+        let user = UserRequest(name: "Cesar", email: "cesar@mail.como", gender: "male", status: "active")
+
+        activityIndicator.startAnimating()
+
+        NetworkingProvider.shared
+            .addUser(user: user, success: { user in
+                self.activityIndicator.stopAnimating()
+                self.titleLb.text = "\(user.id?.description ?? ""): \(user.name?.description ?? "")"
+                self.descriptionLb.text = user.email
             }, failure: { error in
                 self.activityIndicator.stopAnimating()
                 print(error)

@@ -47,6 +47,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnD-CC-sjy">
+                                <rect key="frame" x="149" y="301" width="95" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add User"/>
+                                <connections>
+                                    <action selector="addUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofv-wg-tDv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -54,9 +62,11 @@
                             <constraint firstItem="EeG-tA-cWN" firstAttribute="top" secondItem="nkT-dH-W1e" secondAttribute="bottom" constant="10" id="C2B-bt-JNe"/>
                             <constraint firstItem="TiC-AF-CnJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DD6-a6-r8I"/>
                             <constraint firstItem="EeG-tA-cWN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mln-65-GYM"/>
+                            <constraint firstItem="GnD-CC-sjy" firstAttribute="top" secondItem="EeG-tA-cWN" secondAttribute="bottom" constant="40" id="PDT-do-Qy6"/>
                             <constraint firstItem="OhF-Hl-A0a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WJj-ds-c08"/>
                             <constraint firstItem="TiC-AF-CnJ" firstAttribute="top" secondItem="vCH-d7-mus" secondAttribute="bottom" constant="20" id="aK8-14-1cb"/>
                             <constraint firstItem="nkT-dH-W1e" firstAttribute="top" secondItem="TiC-AF-CnJ" secondAttribute="bottom" constant="40" id="hbi-FH-q0P"/>
+                            <constraint firstItem="GnD-CC-sjy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="plT-Ch-lWy"/>
                             <constraint firstItem="nkT-dH-W1e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="plr-Bq-z6L"/>
                             <constraint firstItem="vCH-d7-mus" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uON-MQ-OKF"/>
                             <constraint firstItem="OhF-Hl-A0a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vG1-bx-vBa"/>

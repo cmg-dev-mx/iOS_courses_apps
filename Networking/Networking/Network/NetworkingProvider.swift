@@ -14,6 +14,7 @@ final class NetworkingProvider {
 
     private let kBaseUrl = "https://gorest.co.in/public/v2/"
     private let kStatusOk = 200...299
+    private let kToken = "..." // GoRest token
 
     func getUser(id: Int, success: @escaping (_ user: UserResponse) -> (), failure: @escaping (_ error: Error?) -> ()) {
         let url = "\(kBaseUrl)users/\(id)"
@@ -37,6 +38,22 @@ final class NetworkingProvider {
             .responseDecodable(of: TodoResponse.self, decoder: DateDecoder()) { response in
                 if let todo = response.value {
                     success(todo)
+                } else {
+                    failure(response.error)
+                }
+            }
+    }
+
+    func addUser(user: UserRequest, success: @escaping (_ user: UserResponse) -> (), failure: @escaping (_ error: Error?) -> ()) {
+        let url = "\(kBaseUrl)users"
+
+        let headers: HTTPHeaders = [.authorization(bearerToken: kToken)]
+
+        AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: headers)
+            .validate(statusCode: kStatusOk)
+            .responseDecodable(of: UserResponse.self) { response in
+                if let user = response.value, user.id != nil {
+                    success(user)
                 } else {
                     failure(response.error)
                 }
