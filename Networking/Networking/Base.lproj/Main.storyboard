@@ -24,24 +24,50 @@
                                     <action selector="getUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b7f-hM-cYg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-AF-CnJ">
-                                <rect key="frame" x="149.66666666666666" y="166" width="94" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-AF-CnJ">
+                                <rect key="frame" x="149.66666666666666" y="134" width="94" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Todo"/>
                                 <connections>
                                     <action selector="getTodoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQW-uW-YlQ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="OhF-Hl-A0a">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkT-dH-W1e">
+                                <rect key="frame" x="175.66666666666666" y="209" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeG-tA-cWN">
+                                <rect key="frame" x="175.66666666666666" y="240" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="EeG-tA-cWN" firstAttribute="top" secondItem="nkT-dH-W1e" secondAttribute="bottom" constant="10" id="C2B-bt-JNe"/>
                             <constraint firstItem="TiC-AF-CnJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DD6-a6-r8I"/>
+                            <constraint firstItem="EeG-tA-cWN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mln-65-GYM"/>
+                            <constraint firstItem="OhF-Hl-A0a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WJj-ds-c08"/>
                             <constraint firstItem="TiC-AF-CnJ" firstAttribute="top" secondItem="vCH-d7-mus" secondAttribute="bottom" constant="20" id="aK8-14-1cb"/>
+                            <constraint firstItem="nkT-dH-W1e" firstAttribute="top" secondItem="TiC-AF-CnJ" secondAttribute="bottom" constant="40" id="hbi-FH-q0P"/>
+                            <constraint firstItem="nkT-dH-W1e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="plr-Bq-z6L"/>
                             <constraint firstItem="vCH-d7-mus" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uON-MQ-OKF"/>
+                            <constraint firstItem="OhF-Hl-A0a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vG1-bx-vBa"/>
                             <constraint firstItem="vCH-d7-mus" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zfz-5R-fMH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="OhF-Hl-A0a" id="Nd8-4e-3gS"/>
+                        <outlet property="descriptionLb" destination="EeG-tA-cWN" id="uE8-f8-w2a"/>
+                        <outlet property="titleLb" destination="nkT-dH-W1e" id="xST-Fy-04r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -15,32 +15,30 @@ final class NetworkingProvider {
     private let kBaseUrl = "https://gorest.co.in/public/v2/"
     private let kStatusOk = 200...299
 
-    func getUser(id: Int) {
+    func getUser(id: Int, success: @escaping (_ user: UserResponse) -> (), failure: @escaping (_ error: Error?) -> ()) {
         let url = "\(kBaseUrl)users/\(id)"
 
         AF.request(url, method: .get)
             .validate(statusCode: kStatusOk)
             .responseDecodable(of: UserResponse.self) { response in
                 if let user = response.value {
-                    print(user)
-                    print(user.email)
+                    success(user)
                 } else {
-                    print(response.error?.localizedDescription ?? "Error")
+                    failure(response.error)
                 }
             }
     }
 
-    func getTodo(id: Int) {
+    func getTodo(id: Int, success: @escaping (_ todo: TodoResponse) -> (), failure: @escaping (_ error: Error?) -> ()) {
         let url = "\(kBaseUrl)todos/\(id)"
 
         AF.request(url, method: .get)
             .validate(statusCode: kStatusOk)
             .responseDecodable(of: TodoResponse.self, decoder: DateDecoder()) { response in
                 if let todo = response.value {
-                    print(todo)
-                    print(todo.dueOn)
+                    success(todo)
                 } else {
-                    print(response.error?.localizedDescription ?? "Error")
+                    failure(response.error)
                 }
             }
     }
