@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func getUserAction(_ sender: Any) {
+        NetworkingProvider.shared
+            .getUser(id: 6940081)
+    }
+    
 }
 

@@ -12,4 +12,22 @@ final class NetworkingProvider {
 
     static let shared = NetworkingProvider()
 
+    private let kBaseUrl = "https://gorest.co.in/public/v2/"
+    private let kStatusOk = 200...299
+
+    func getUser(id: Int) {
+        let url = "\(kBaseUrl)users/\(id)"
+
+        AF.request(url, method: .get)
+            .validate(statusCode: kStatusOk)
+            .responseDecodable(of: UserResponse.self) { response in
+                if let user = response.value {
+                    print(user)
+                    print(user.email)
+                } else {
+                    print(response.error?.localizedDescription ?? "Error")
+                }
+            }
+    }
+
 }
