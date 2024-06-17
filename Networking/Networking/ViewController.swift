@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var titleLb: UILabel!
     @IBOutlet weak var descriptionLb: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,5 +65,9 @@ class ViewController: UIViewController {
                 self.activityIndicator.stopAnimating()
                 print(error)
             })
+    }
+    
+    @IBAction func downloadImageAction(_ sender: Any) {
+        logoImageView.kf.setImage(with: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Android_logo_2019.png/599px-Android_logo_2019.png"))
     }
 }
