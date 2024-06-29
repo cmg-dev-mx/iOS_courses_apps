@@ -11,6 +11,7 @@
 		D766DEA42C3091FB001F02E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEA32C3091FB001F02E2 /* ContentView.swift */; };
 		D766DEA62C3091FC001F02E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D766DEA52C3091FC001F02E2 /* Assets.xcassets */; };
 		D766DEA92C3091FC001F02E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D766DEA82C3091FC001F02E2 /* Preview Assets.xcassets */; };
+		D766DEB02C30A3DA001F02E2 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEAF2C30A3DA001F02E2 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D766DEA32C3091FB001F02E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D766DEA52C3091FC001F02E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D766DEA82C3091FC001F02E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D766DEAF2C30A3DA001F02E2 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				D766DEA32C3091FB001F02E2 /* ContentView.swift */,
 				D766DEA52C3091FC001F02E2 /* Assets.xcassets */,
 				D766DEA72C3091FC001F02E2 /* Preview Content */,
+				D766DEAF2C30A3DA001F02E2 /* ImageView.swift */,
 			);
 			path = SwiftUITutorial;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D766DEB02C30A3DA001F02E2 /* ImageView.swift in Sources */,
 				D766DEA42C3091FB001F02E2 /* ContentView.swift in Sources */,
 				D766DEA22C3091FB001F02E2 /* SwiftUITutorialApp.swift in Sources */,
 			);
