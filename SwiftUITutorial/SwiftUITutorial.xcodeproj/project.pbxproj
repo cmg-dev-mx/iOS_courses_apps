@@ -18,6 +18,9 @@
 		D766DEBB2C30FF69001F02E2 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEBA2C30FF69001F02E2 /* RowView.swift */; };
 		D766DEBD2C310242001F02E2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEBC2C310242001F02E2 /* ListView.swift */; };
 		D766DEBF2C3104F5001F02E2 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEBE2C3104F5001F02E2 /* ListDetailView.swift */; };
+		D766DEC22C311445001F02E2 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEC12C311444001F02E2 /* StateView.swift */; };
+		D766DEC42C31151B001F02E2 /* BindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEC32C31151B001F02E2 /* BindingView.swift */; };
+		D766DEC62C311947001F02E2 /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEC52C311947001F02E2 /* EnvironmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		D766DEBA2C30FF69001F02E2 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		D766DEBC2C310242001F02E2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D766DEBE2C3104F5001F02E2 /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
+		D766DEC12C311444001F02E2 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		D766DEC32C31151B001F02E2 /* BindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingView.swift; sourceTree = "<group>"; };
+		D766DEC52C311947001F02E2 /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		D766DEA02C3091FB001F02E2 /* SwiftUITutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D766DEC02C311418001F02E2 /* PropertyWrappers */,
 				D766DEB82C30FF53001F02E2 /* Views */,
 				D766DEB52C30FEEA001F02E2 /* Data */,
 				D766DEA12C3091FB001F02E2 /* SwiftUITutorialApp.swift */,
@@ -102,6 +109,16 @@
 				D766DEBE2C3104F5001F02E2 /* ListDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D766DEC02C311418001F02E2 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				D766DEC12C311444001F02E2 /* StateView.swift */,
+				D766DEC32C31151B001F02E2 /* BindingView.swift */,
+				D766DEC52C311947001F02E2 /* EnvironmentView.swift */,
+			);
+			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +192,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D766DEBD2C310242001F02E2 /* ListView.swift in Sources */,
+				D766DEC42C31151B001F02E2 /* BindingView.swift in Sources */,
 				D766DEB02C30A3DA001F02E2 /* ImageView.swift in Sources */,
+				D766DEC22C311445001F02E2 /* StateView.swift in Sources */,
+				D766DEC62C311947001F02E2 /* EnvironmentView.swift in Sources */,
 				D766DEB72C30FEFC001F02E2 /* Programmer.swift in Sources */,
 				D766DEBB2C30FF69001F02E2 /* RowView.swift in Sources */,
 				D766DEB22C30F8BF001F02E2 /* MapView.swift in Sources */,
