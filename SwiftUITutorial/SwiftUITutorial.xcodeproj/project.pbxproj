@@ -13,6 +13,7 @@
 		D766DEA92C3091FC001F02E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D766DEA82C3091FC001F02E2 /* Preview Assets.xcassets */; };
 		D766DEB02C30A3DA001F02E2 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEAF2C30A3DA001F02E2 /* ImageView.swift */; };
 		D766DEB22C30F8BF001F02E2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEB12C30F8BF001F02E2 /* MapView.swift */; };
+		D766DEB42C30FB5B001F02E2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEB32C30FB5B001F02E2 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		D766DEA82C3091FC001F02E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D766DEAF2C30A3DA001F02E2 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		D766DEB12C30F8BF001F02E2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D766DEB32C30FB5B001F02E2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				D766DEA72C3091FC001F02E2 /* Preview Content */,
 				D766DEAF2C30A3DA001F02E2 /* ImageView.swift */,
 				D766DEB12C30F8BF001F02E2 /* MapView.swift */,
+				D766DEB32C30FB5B001F02E2 /* MainView.swift */,
 			);
 			path = SwiftUITutorial;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				D766DEB02C30A3DA001F02E2 /* ImageView.swift in Sources */,
 				D766DEB22C30F8BF001F02E2 /* MapView.swift in Sources */,
 				D766DEA42C3091FB001F02E2 /* ContentView.swift in Sources */,
+				D766DEB42C30FB5B001F02E2 /* MainView.swift in Sources */,
 				D766DEA22C3091FB001F02E2 /* SwiftUITutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
