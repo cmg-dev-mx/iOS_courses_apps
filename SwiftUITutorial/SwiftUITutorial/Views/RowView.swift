@@ -24,6 +24,14 @@ struct RowView: View {
             }
 
             Spacer()
+
+            if (programmer.favorite) {
+                Image(systemName: "star.fill")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .padding(10)
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
@@ -33,6 +41,7 @@ struct RowView: View {
         id: 1,
         name: "Cesar",
         languages: "Kotlin, Swift, TypeScript",
-        avatar: Image(systemName: "person.fill")
+        avatar: Image(systemName: "person.fill"),
+        favorite: true
     ))
 }

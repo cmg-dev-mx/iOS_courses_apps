@@ -32,6 +32,7 @@ struct ListDetailView: View {
         id: 1,
         name: "Cesar",
         languages: "Kotlin, Swift, TypeScript",
-        avatar: Image(systemName: "person.fill")
+        avatar: Image(systemName: "person.fill"),
+        favorite: true
     ))
 }
