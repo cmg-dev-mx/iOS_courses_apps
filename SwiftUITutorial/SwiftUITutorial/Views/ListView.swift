@@ -24,10 +24,15 @@ struct ListView: View {
     ]
 
     var body: some View {
-        List {
-            ForEach(programmers, id: \.id) { programmer in
-                RowView(programmer: programmer)
+        NavigationView {
+            List {
+                ForEach(programmers, id: \.id) { programmer in
+                    NavigationLink(destination: ListDetailView(programmer: programmer)) {
+                        RowView(programmer: programmer) 
+                    }
+                }
             }
+            .navigationTitle("Programmers")
         }
     }
 }

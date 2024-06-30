@@ -17,6 +17,7 @@
 		D766DEB72C30FEFC001F02E2 /* Programmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEB62C30FEFC001F02E2 /* Programmer.swift */; };
 		D766DEBB2C30FF69001F02E2 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEBA2C30FF69001F02E2 /* RowView.swift */; };
 		D766DEBD2C310242001F02E2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEBC2C310242001F02E2 /* ListView.swift */; };
+		D766DEBF2C3104F5001F02E2 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766DEBE2C3104F5001F02E2 /* ListDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D766DEB62C30FEFC001F02E2 /* Programmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Programmer.swift; sourceTree = "<group>"; };
 		D766DEBA2C30FF69001F02E2 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		D766DEBC2C310242001F02E2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		D766DEBE2C3104F5001F02E2 /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				D766DEBA2C30FF69001F02E2 /* RowView.swift */,
 				D766DEBC2C310242001F02E2 /* ListView.swift */,
+				D766DEBE2C3104F5001F02E2 /* ListDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				D766DEBB2C30FF69001F02E2 /* RowView.swift in Sources */,
 				D766DEB22C30F8BF001F02E2 /* MapView.swift in Sources */,
 				D766DEA42C3091FB001F02E2 /* ContentView.swift in Sources */,
+				D766DEBF2C3104F5001F02E2 /* ListDetailView.swift in Sources */,
 				D766DEB42C30FB5B001F02E2 /* MainView.swift in Sources */,
 				D766DEA22C3091FB001F02E2 /* SwiftUITutorialApp.swift in Sources */,
 			);
