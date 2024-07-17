@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        Analytics.logEvent("HomeScreen", parameters: ["message": "Integracion de Firebase completada"])
     }
 
 
