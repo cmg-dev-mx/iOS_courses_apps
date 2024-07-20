@@ -7,9 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import GoogleSignIn
 
 enum ProviderType: String {
     case basic
+    case google
 }
 
 class HomeViewController: UIViewController {
@@ -35,22 +37,45 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.setHidesBackButton(true, animated: false)
+
         title = "Inicio"
         emailLabel.text = email
         providerLabel.text = provider.rawValue
+
+        // Guardamos los datos del usuario
+
+        let defaults = UserDefaults.standard
+        defaults.set(email, forKey: "email")
+        defaults.set(provider.rawValue, forKey: "provider")
+        defaults.synchronize()
     }
     
     @IBAction func logOutAction(_ sender: Any) {
+        // Borramos los datos del usuario
+
+                let defaults = UserDefaults.standard
+                defaults.removeObject(forKey: "email")
+                defaults.removeObject(forKey: "provider")
+                defaults.synchronize()
+
         switch provider {
-        case .basic:
-            do {
-                try Auth.auth().signOut()
-                navigationController?.popViewController(animated: true)
-            } catch {
-                let alertController = UIAlertController(title: "Error", message: "Se ha producido un error cerrando la sesión", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
-                present(alertController, animated: true, completion: nil)
-            }
+        case .basic: 
+            firebaseLogOut()
+        case .google: 
+            GIDSignIn.sharedInstance.signOut()
+            firebaseLogOut()
+        }
+        navigationController?.popViewController(animated: true)
+    }
+
+    private func firebaseLogOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            let alertController = UIAlertController(title: "Error", message: "Se ha producido un error cerrando la sesión", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            present(alertController, animated: true, completion: nil)
         }
     }
 }

@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R3O-1O-BCv">
-                                <rect key="frame" x="16" y="119" width="361" height="136"/>
+                                <rect key="frame" x="16" y="119" width="361" height="184"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vn-9Y-ST7">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
@@ -78,6 +78,19 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-hE-TSv">
+                                        <rect key="frame" x="0.0" y="144" width="361" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_google" title="Google">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="googleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z1k-3Y-j1s"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -91,7 +104,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="rgi-Lc-Uy0"/>
                     <connections>
+                        <outlet property="authStackView" destination="R3O-1O-BCv" id="rxO-d6-Aar"/>
                         <outlet property="emailTextField" destination="0vn-9Y-ST7" id="wwU-03-nVr"/>
+                        <outlet property="googleButton" destination="bsv-hE-TSv" id="9Gq-C8-Xj0"/>
                         <outlet property="logInButton" destination="EzT-B8-wQH" id="4Hu-CF-j2o"/>
                         <outlet property="passwordTextField" destination="ysy-3i-WVX" id="4pq-cG-8je"/>
                         <outlet property="signUpButton" destination="6a9-c0-MAC" id="Kk8-o1-dY3"/>
@@ -102,4 +117,7 @@
             <point key="canvasLocation" x="63" y="-23"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_google" width="48" height="48"/>
+    </resources>
 </document>
