@@ -10,6 +10,7 @@ import FirebaseAnalytics
 import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
+import FirebaseRemoteConfig
 
 class AuthViewController: UIViewController {
 
@@ -40,6 +41,29 @@ class AuthViewController: UIViewController {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config
+
+        // Remote config
+        let settings = RemoteConfigSettings()
+        settings.minimumFetchInterval = 60
+
+        let remoteConfig = RemoteConfig.remoteConfig()
+        remoteConfig.configSettings = settings
+        remoteConfig.setDefaults([
+            "error_button_text": NSString("Forzar Crash"),
+            "show_error_button": NSNumber(true)
+        ])
+        
+        remoteConfig.fetchAndActivate { status, error in
+            if status != .error {
+                let showButton = remoteConfig["show_error_button"].boolValue
+                let buttonText = remoteConfig["error_button_text"].stringValue
+                
+                DispatchQueue.main.async {
+                    self.crashButton.isHidden = !showButton
+                    self.crashButton.setTitle(buttonText, for: .normal) 
+                }
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
