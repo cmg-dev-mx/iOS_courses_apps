@@ -20,6 +20,7 @@
 		D70DF5DA2C4B57A500599674 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = D70DF5D92C4B57A500599674 /* GoogleSignIn */; };
 		D70DF5DC2C4B57A500599674 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D70DF5DB2C4B57A500599674 /* GoogleSignInSwift */; };
 		D70DF5DE2C4B589D00599674 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D70DF5DD2C4B589D00599674 /* GoogleService-Info.plist */; };
+		D74EFBDB2C4C900B00FA3988 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D74EFBDA2C4C900B00FA3988 /* FirebaseCrashlytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			files = (
 				2390E21C2C482E06009C11A7 /* FirebaseAnalytics in Frameworks */,
 				2390E21E2C4851FB009C11A7 /* FirebaseAuth in Frameworks */,
+				D74EFBDB2C4C900B00FA3988 /* FirebaseCrashlytics in Frameworks */,
 				D70DF5DA2C4B57A500599674 /* GoogleSignIn in Frameworks */,
 				D70DF5DC2C4B57A500599674 /* GoogleSignInSwift in Frameworks */,
 			);
@@ -94,6 +96,7 @@
 				2390E1FD2C48251D009C11A7 /* Sources */,
 				2390E1FE2C48251D009C11A7 /* Frameworks */,
 				2390E1FF2C48251D009C11A7 /* Resources */,
+				D74EFBDD2C4C93F700FA3988 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -105,6 +108,7 @@
 				2390E21D2C4851FB009C11A7 /* FirebaseAuth */,
 				D70DF5D92C4B57A500599674 /* GoogleSignIn */,
 				D70DF5DB2C4B57A500599674 /* GoogleSignInSwift */,
+				D74EFBDA2C4C900B00FA3988 /* FirebaseCrashlytics */,
 			);
 			productName = FirebaseTutorial;
 			productReference = 2390E2012C48251D009C11A7 /* FirebaseTutorial.app */;
@@ -161,6 +165,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D74EFBDD2C4C93F700FA3988 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2390E1FD2C48251D009C11A7 /* Sources */ = {
@@ -253,6 +282,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -309,6 +339,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -322,6 +353,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseTutorial/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Firebase;
@@ -432,6 +464,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D70DF5D82C4B57A400599674 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		D74EFBDA2C4C900B00FA3988 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2390E21A2C482E06009C11A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -19,6 +19,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet weak var crashButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +78,11 @@ class AuthViewController: UIViewController {
             }
         }
     }
-
+    
+    @IBAction func crashAction(_ sender: Any) {
+        fatalError("Crash was triggered")
+    }
+    
     private func showHome(result: AuthDataResult?, error: Error?, provider: ProviderType) {
         if let result = result, error == nil {
             self.navigationController?.pushViewController(HomeViewController(email: result.user.email!, provider: provider), animated: true)
