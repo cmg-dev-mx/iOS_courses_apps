@@ -32,5 +32,7 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSApplicationCrashOnExceptions</key>
+    <string>YES</string>
 </dict>
 </plist>
