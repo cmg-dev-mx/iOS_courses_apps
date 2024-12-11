@@ -53,7 +53,7 @@
                                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="onClickButtonD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ig9-ns-1EF"/>
+                                                    <action selector="onClickButtonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uiS-4b-fSs"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -76,7 +76,7 @@
                                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="onClickButtonE:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUW-qV-yuh"/>
+                                                    <action selector="onClickButtonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEy-2p-Nua"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -99,7 +99,7 @@
                                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="onClickButtonF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSh-3j-oFE"/>
+                                                    <action selector="onClickButtonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RmG-kJ-JVl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -122,8 +122,7 @@
                                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="onClickButtonF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yN1-Qc-7QF"/>
-                                                    <action selector="onClickButtonG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B0X-Pm-TvK"/>
+                                                    <action selector="onClickButtonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yhm-R3-lSi"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -146,7 +145,7 @@
                                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="onClickButtonA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pos-uG-fh8"/>
+                                                    <action selector="onClickButtonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3W4-lk-KwU"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -169,7 +168,7 @@
                                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="onClickButtonB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1AG-6f-TBg"/>
+                                                    <action selector="onClickButtonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x3f-ko-gb7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
