@@ -53,18 +53,40 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-he-2Wo">
+                                <rect key="frame" x="16" y="778" width="361" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVy-JR-rJX">
+                                <rect key="frame" x="135.33333333333334" y="394.66666666666669" width="122.66666666666666" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Stop counter"/>
+                                <connections>
+                                    <action selector="onclickButtonStopCounteer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dx6-gN-vA7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.58039215686274503" green="0.77647058823529413" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YMb-GN-8rC" firstAttribute="top" secondItem="qK6-bh-yEd" secondAttribute="bottom" constant="100" id="AZG-sI-Ewa"/>
+                            <constraint firstItem="3Sn-he-2Wo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Hbj-oV-43i"/>
+                            <constraint firstItem="XVy-JR-rJX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ix4-3W-ys1"/>
                             <constraint firstItem="YMb-GN-8rC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="IyB-Ey-2Wt"/>
+                            <constraint firstItem="XVy-JR-rJX" firstAttribute="top" secondItem="YMb-GN-8rC" secondAttribute="bottom" constant="50" id="Nc6-9c-OwF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Sn-he-2Wo" secondAttribute="trailing" constant="16" id="O5U-T1-N1U"/>
                             <constraint firstItem="qK6-bh-yEd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="U50-l7-CAM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qK6-bh-yEd" secondAttribute="trailing" constant="16" id="c8l-UJ-UfI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Sn-he-2Wo" secondAttribute="bottom" constant="40" id="cnw-cu-XTb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YMb-GN-8rC" secondAttribute="trailing" constant="16" id="ijV-gp-oiK"/>
                             <constraint firstItem="qK6-bh-yEd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="r3h-1f-KSE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelTimeRemaining" destination="3Sn-he-2Wo" id="iWb-UD-KZn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
