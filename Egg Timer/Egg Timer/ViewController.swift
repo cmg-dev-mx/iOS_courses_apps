@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var labelTimeRemaining: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     let eggTimes = ["Soft": 5, "Medium": 8, "Hard": 12] // time in minutes
 
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
     @IBAction func onclickButtonStopCounteer(_ sender: Any) {
         timer.invalidate()
         updateLabel("Cancelled")
+        updateProgressBar(0)
     }
     
     @IBAction func onClickHardnessSelected(_ sender: UIButton) {
@@ -32,11 +34,13 @@ class ViewController: UIViewController {
         var timeRemaining = selectedTime
 
         updateLabelTimeRemaining(timeRemaining: timeRemaining)
+        updateProgressBar(1)
 
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if timeRemaining > 0 {
                 timeRemaining -= 1
                 self.updateLabelTimeRemaining(timeRemaining: timeRemaining)
+                self.updateProgressBar(Float(timeRemaining) / Float(self.selectedTime))
             } else {
                 timer.invalidate()
                 self.updateLabel("Done!")
@@ -52,7 +56,10 @@ class ViewController: UIViewController {
         } else {
             updateLabel("\(timeRemaining) seconds")
         }
+    }
 
+    private func updateProgressBar(_ progress: Float) {
+        progressBar.progress = progress
     }
 
     private func updateLabel(_ text: String) {
