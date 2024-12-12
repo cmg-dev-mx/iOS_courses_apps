@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -16,11 +17,13 @@ class ViewController: UIViewController {
 
     var selectedTime = 0 // in seconds
     var timer = Timer()
+    var player: AVAudioPlayer!
 
     @IBAction func onclickButtonStopCounteer(_ sender: Any) {
         timer.invalidate()
         updateLabel("Cancelled")
         updateProgressBar(0)
+        reproduceSound()
     }
     
     @IBAction func onClickHardnessSelected(_ sender: UIButton) {
@@ -44,6 +47,7 @@ class ViewController: UIViewController {
             } else {
                 timer.invalidate()
                 self.updateLabel("Done!")
+                self.reproduceSound()
             }
         }
     }
@@ -64,6 +68,12 @@ class ViewController: UIViewController {
 
     private func updateLabel(_ text: String) {
         labelTimeRemaining.text = text
+    }
+    
+    private func reproduceSound() {
+        let url = Bundle.main.url(forResource: "done", withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
     }
 }
 
