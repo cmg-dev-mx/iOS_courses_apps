@@ -8,23 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let softTime = 5
-    let mediumTime = 8
-    let hardTime = 12
+
+    let eggTimes = ["Soft": 5, "Medium": 8, "Hard": 12]
 
     @IBAction func onClickHardnessSelected(_ sender: UIButton) {
         let hardness = sender.titleLabel?.text ?? "No title"
         
-        let timeToCook = switch hardness {
-            case "Soft":
-                softTime
-            case "Medium":
-                mediumTime
-            case "Hard":
-                hardTime
-            default: 0
-        }
+        let timeToCook = eggTimes[hardness] ?? 0
         
         print("Time to cook: \(timeToCook)")
     }
