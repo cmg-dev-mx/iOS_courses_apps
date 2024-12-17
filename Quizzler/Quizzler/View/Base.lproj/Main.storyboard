@@ -18,8 +18,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dq9-CD-lzz">
                                 <rect key="frame" x="10" y="69" width="373" height="739"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee1-k7-7zJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="iEN-jN-OwZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.73657163699999995" green="0.74386442549999998" blue="0.74386442549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7s-eF-uvV">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="615"/>
+                                        <rect key="frame" x="0.0" y="48" width="373" height="567"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" red="0.73657163701970685" green="0.7438644255050505" blue="0.7438644255050505" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -77,6 +86,7 @@
                         <outlet property="btnFalse" destination="uKF-cb-agQ" id="SyW-ZK-Cl5"/>
                         <outlet property="btnTrue" destination="Udo-L1-RTq" id="PYG-VV-Xtx"/>
                         <outlet property="lblQuestion" destination="S7s-eF-uvV" id="jAg-pU-frK"/>
+                        <outlet property="lblScore" destination="Ee1-k7-7zJ" id="xmB-wG-M67"/>
                         <outlet property="progressBar" destination="KQB-iz-NRY" id="dlz-Ga-Ci6"/>
                     </connections>
                 </viewController>

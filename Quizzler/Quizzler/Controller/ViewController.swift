@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var lblQuestion: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var btnTrue: UIButton!
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
     @objc func updateUI() {
         progressBar.progress = quizBrain.getProgress()
         lblQuestion.text = quizBrain.getQuestionText()
+        lblScore.text = "Score: \(quizBrain.getScore())"
         btnTrue.backgroundColor = .clear
         btnFalse.backgroundColor = .clear
     }
