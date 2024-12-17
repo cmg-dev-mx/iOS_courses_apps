@@ -41,16 +41,19 @@ class ViewController: UIViewController {
         let actualAnswer = quiz[questionNumber].answer
         
         if actualAnswer == userAnswer {
-            print("Correct")
+            sender.backgroundColor = .green
         } else {
-            print("Incorrect")
+            sender.backgroundColor = .red
         }
         
         questionNumber = (questionNumber + 1) % quiz.count
-        updateUI()
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
-    func updateUI() {
+    @objc func updateUI() {
+        progressBar.progress = Float(questionNumber+1) / Float(quiz.count)
         lblQuestion.text = quiz[questionNumber].question
+        btnTrue.backgroundColor = .clear
+        btnFalse.backgroundColor = .clear
     }
 }
