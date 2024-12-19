@@ -123,6 +123,8 @@ YOUR BMI</string>
                     <connections>
                         <outlet property="lblHeight" destination="fsG-Io-JZb" id="PWF-kh-i1O"/>
                         <outlet property="lblWeight" destination="8ZR-6B-DuL" id="YxE-J4-IBi"/>
+                        <outlet property="sliderHeight" destination="O28-sI-SOY" id="BNK-8p-joL"/>
+                        <outlet property="sliderWeight" destination="1X6-Os-8yo" id="bTf-2X-MKI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
