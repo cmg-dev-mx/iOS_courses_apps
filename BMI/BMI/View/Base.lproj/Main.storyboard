@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,22 +125,23 @@ YOUR BMI</string>
                         <outlet property="lblWeight" destination="8ZR-6B-DuL" id="YxE-J4-IBi"/>
                         <outlet property="sliderHeight" destination="O28-sI-SOY" id="BNK-8p-joL"/>
                         <outlet property="sliderWeight" destination="1X6-Os-8yo" id="bTf-2X-MKI"/>
+                        <segue destination="v7c-8N-hTd" kind="presentation" identifier="goToResults" id="Ptg-2m-RD6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-27"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="XPk-LQ-2gL">
             <objects>
-                <viewController id="v7c-8N-hTd" sceneMemberID="viewController">
+                <viewController id="v7c-8N-hTd" customClass="ResultViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dys-80-hoN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TFd-4B-1Ls">
-                                <rect key="frame" x="10" y="341" width="373" height="170.33333333333337"/>
+                                <rect key="frame" x="10" y="336" width="373" height="170.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8E-rP-Wle">
                                         <rect key="frame" x="80.333333333333329" y="0.0" width="212.66666666666669" height="38.333333333333336"/>
@@ -163,7 +164,7 @@ YOUR BMI</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzo-za-OIh">
-                                <rect key="frame" x="10" y="768" width="373" height="40"/>
+                                <rect key="frame" x="10" y="792" width="373" height="40"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FSe-gN-1ew"/>
@@ -171,6 +172,9 @@ YOUR BMI</string>
                                 <color key="tintColor" red="0.13866461129999999" green="0.076638317629999994" blue="0.31802398990000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="RECALCULATE"/>
+                                <connections>
+                                    <action selector="onCilckBtnRecalculate:" destination="v7c-8N-hTd" eventType="touchUpInside" id="Wdu-qk-EH5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pC9-r0-tyo"/>
@@ -184,6 +188,10 @@ YOUR BMI</string>
                             <constraint firstItem="pC9-r0-tyo" firstAttribute="trailing" secondItem="TFd-4B-1Ls" secondAttribute="trailing" constant="10" id="s0j-Ai-oj2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblAdvice" destination="ceZ-oB-3Fh" id="fHx-vY-CwJ"/>
+                        <outlet property="lblResult" destination="fmX-KW-VA3" id="6Pp-Hd-BdP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mil-jM-GY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
